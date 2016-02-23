@@ -1,0 +1,145 @@
+/***************************************************/
+/* TVS JOYSTICK */
+/***************************************************/
+
+/* General */
+#joystick, #joystick table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#joystick table {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#joystick .gwt-Label {
+    word-break: break-all;
+}
+
+#joystick button {
+    width: 50%;
+    padding-bottom: 100%;
+    background-color: -webkit-linear-gradient(top, #484848, #373737);
+    border-color: #202020;
+    box-shadow: 0 0 1px #292929;
+}
+
+#joystick button:enabled:hover {
+    box-shadow: 0 0 5px #002533;
+}
+
+#joystick button:disabled, #joystick select:disabled {
+    opacity: 0.5;
+}
+
+/* tvs-button FIX */
+#joystick button[image]:disabled:after {
+	-webkit-filter: brightness(100%);
+}
+
+#joystick button:enabled:active {
+    background-color: -webkit-linear-gradient(top, #0073a2, #004c6b);
+    box-shadow: 0 0 3px #002533 inset;
+}
+
+#joystick button.tvs-ImageButton {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+/* Buttons grid */
+#joystick table.joystick-buttons-grid > tbody > tr > td {
+    width: 30%;
+}
+
+#joystick table.joystick-buttons-grid > tbody > tr > td:nth-child(2) {
+    width: 40%;
+}
+
+/* Speeds grid */
+#joystick table.joystick-speeds-grid > tbody > tr > td > table {
+    width: 75%;
+    margin: auto;
+}
+
+/* Move grid */
+#joystick table.joystick-move-grid {
+    height: auto;
+}
+
+#joystick table.joystick-move-grid button {
+    width: 100%;
+}
+
+#joystick .joystick-move-grid .tvs-ButtonsBar button {
+    width: auto;
+    padding: 0;
+}
+
+#joystick button[image="joystick-up-left-button"]:after {
+    background-image: url("../img/joystick/up_left_button.png");
+}
+
+#joystick button[image="joystick-up-button"]:after {
+    background-image: url("../img/joystick/up_button.png");
+}
+
+#joystick button[image="joystick-up-right-button"]:after {
+    background-image: url("../img/joystick/up_right_button.png");
+}
+
+#joystick button[image="joystick-left-button"]:after {
+    background-image: url("../img/joystick/left_button.png");
+}
+
+#joystick button[image="joystick-action-button"]:after {
+    background-image: url("../img/joystick/action_button.png");
+}
+
+#joystick button[image="joystick-right-button"]:after {
+    background-image: url("../img/joystick/right_button.png");
+}
+
+#joystick button[image="joystick-down-left-button"]:after {
+    background-image: url("../img/joystick/down_left_button.png");
+}
+
+#joystick button[image="joystick-down-button"]:after {
+    background-image: url("../img/joystick/down_button.png");
+}
+
+#joystick button[image="joystick-down-right-button"]:after {
+    background-image: url("../img/joystick/down_right_button.png");
+}
+
+/* Zoom grid */
+#joystick button[image="joystick-zoom-in-button"]:after {
+    background-image: url("../img/joystick/zoom_in_button.png");
+}
+
+#joystick button[image="joystick-zoom-out-button"]:after {
+    background-image: url("../img/joystick/zoom_out_button.png");
+}
+
+/* Focus grid */
+#joystick button[image="joystick-focus-in-button"]:after {
+    background-image: url("../img/joystick/focus_in_button.png");
+}
+
+#joystick button[image="joystick-focus-out-button"]:after {
+    background-image: url("../img/joystick/focus_out_button.png");
+}
+
+/* Zoom & Focus */
+#joystick button[image^="joystick-focus"]:after, #joystick button[image^="joystick-zoom"]:after {
+    background-size: auto 60%;
+}
+
+#joystick button[image^="joystick-focus"], #joystick button[image^="joystick-zoom"] {
+    padding-bottom: 50%;
+}

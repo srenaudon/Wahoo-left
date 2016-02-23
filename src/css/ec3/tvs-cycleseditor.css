@@ -1,0 +1,137 @@
+
+/***************************************************/
+/* MAIN PANELS */
+/***************************************************/
+
+.cycles-editor-main {height:100%;}
+.cycles-editor-parameters {}
+.cycles-editor-steps {margin-top: 0;}
+.cycles-editor-buttons {text-align: center;}
+
+.inner-panel.cycles-editor-steps {padding-top: 0;}
+
+/***************************************************/
+/* PARAMTER INPUTS */
+/***************************************************/
+
+.cycles-editor-parameters table {width:100%; border-spacing: 0;}
+
+.cycles-editor-parameters .param-button {
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	margin: 2px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	border: none;
+}
+.cycles-editor-parameters .param-button:hover {cursor: pointer;}
+
+.cycles-editor-parameters .param-button[img="cycle"] 	{background-size: 22px; background-image: url('../img/cycleseditor/cycle.png');}
+.cycles-editor-parameters .param-button[img="group"] 	{background-size: 22px; background-image: url('../img/cycleseditor/group.png');}
+.cycles-editor-parameters .param-button[img="private"]	{background-size: 16px; background-image: url('../img/cycleseditor/private.png');}
+.cycles-editor-parameters .param-button[img="public"] 	{background-size: 16px; background-image: url('../img/cycleseditor/public.png');}
+
+/***************************************************/
+/* BUTTONS */
+/***************************************************/
+
+.cycles-editor-buttons button {width: 28%;}
+
+/***************************************************/
+/* STEPS */
+/***************************************************/ 
+
+.cycles-editor-steps .insert-step 	{height: 28px;}
+.cycles-editor-steps .suggest-step	{padding-left: 16px; height: 27px;}
+.cycles-editor-steps .suggest-step table {width:100%; border-spacing: 0;}
+
+.cycles-editor-steps .step {
+	height: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.cycles-editor-steps .step[edition="true"] {height: 46px;}
+.cycles-editor-steps .step[edition="true"] .content {height: 44px;}
+
+.cycles-editor-steps .step .content {
+	background-color: #252525;
+	height: 28px;
+	position: absolute;
+	left: 22px;
+	right: 0px;
+	border-radius: 4px;
+	overflow: hidden;
+	font-size: 1em;
+	cursor: pointer;
+	border: 1px solid #222;
+	box-sizing: border-box;
+}
+
+.cycles-editor-steps .step .content:hover {
+	/*
+	color: #00E0FF;
+	border-color: #00E0FF;
+	background-color: #363C3D;
+	*/
+	color: #00A2E4;
+}
+
+.cycles-editor-steps .insert-step .content {opacity: 0.4;}
+
+.cycles-editor-steps .step.suggest .content {
+    background: none;
+	border: none;
+    margin: 2px 0;
+}
+
+.cycles-editor-steps .step .insert-suggestion {
+	position: absolute;
+	right: 0;
+	margin: 0 6px;
+	background-image: none;
+}
+
+.cycles-editor-steps .step .content:hover button.delete {display:block;}
+
+.cycles-editor-steps .step .content div {
+	position: absolute; 
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow: ellipsis; 
+	padding: 6px 0px;
+}
+
+.cycles-editor-steps .step .eqpt 		{left:10px; right: 60px;}
+.cycles-editor-steps .step .option 		{right:10px; left: 10px; top: 20px; color: grey;}
+.cycles-editor-steps .step .duration 	{right:30px; width: 35px; text-align: right;}
+
+.step button {
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: 16px;
+	border: none;
+	width: 16px;
+	height: 28px;
+	position: absolute;
+	font-weight: bold; 
+	font-size: 1.3em;
+	color: white;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+    min-width: initial;
+}
+.step button:hover {cursor:pointer; border: none; color: #00E0FF;}
+.step button[disabled] {color: transparent;}
+.step button.delete {background-image: url('../img/cycleseditor/trash.png'); height: 16px; right: 5px; background-position: center 0px; margin: 5px 0px;}
+.step button.delete:hover {background-position: center -16px;}
+.step button.insert {background-image: none; background-position: center 2px;}
+.step button.insert:hover {background-image: url('../img/cycleseditor/insert_icon.png');}
+
+/* STEP EDITION MODE */
+
+.cycles-editor-steps .step.edit-step {height: 60px;}
+.cycles-editor-steps .step.edit-step .content {height: 58px;}

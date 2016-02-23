@@ -1,0 +1,12 @@
+
+/***************************************************/
+/* TVS INFORMATION PANEL */
+/***************************************************/
+
+.mwt-infopanel-view,
+.mwt-infopanel-entry {background-color: transparent; border: none !important; width: 100% !important;}
+
+.mwt-infopanel-view {padding: 8px; border-bottom: 1px solid #111 !important;}
+.mwt-infopanel-cell-unknown {color: grey !important;}
+
+.mwt-infopanel-view .mwt-infopanel-header img {width: 32px;}

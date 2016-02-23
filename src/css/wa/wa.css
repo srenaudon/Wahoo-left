@@ -1,0 +1,30 @@
+/* css reset */
+body{
+    margin:0px;
+}
+/* layout grid */
+.wa-grid {
+    width: 1920px;
+    height: 600px;
+    overflow: hidden;
+}
+.gridster .gs-w {
+    background: #373737;
+    cursor: pointer;
+}
+
+.gridster > ul {
+    padding: 0px;
+}
+
+
+.wa-grid-cell {
+   overflow: hidden;
+}
+/* KPI */
+.wa-kpi {
+    width: 620px;
+    height: 280px;
+    margin-left: auto;
+    margin-right:auto ;
+}

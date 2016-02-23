@@ -1,0 +1,104 @@
+olMapViewport { background: white; }
+
+
+/***************************************************/
+/* MAIN PANELS */
+/***************************************************/
+.incident-editor{	
+    float: left;
+    width: 25%;    
+    bottom:0;
+}
+
+.incident-editor-main {
+    height:100%;
+    bottom:30px;
+    float: left;
+    background: #373737;
+    min-width: 300px;
+}
+
+.incident-editor-parameters .gwt-TextArea {
+    resize: none;
+}
+.incident-editor-buttons {text-align: center;padding-bottom: 5px;}
+
+/***************************************************/
+/* PARAMETER INPUTS */
+/***************************************************/
+
+.incident-editor-parameters table {width:100%; border-spacing: 0;}
+
+.incident-editor-parameters .param-button {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    margin: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+}
+.incident-editor-parameters .param-button:hover {cursor: pointer;}
+
+/***************************************************/
+/* BUTTONS */
+/***************************************************/
+
+.incident-editor-buttons button {width: 28%;}
+
+.logbook-edition-panel, .logbook-edition-panel .mainContainer {
+    min-width: 800px;
+    min-height: 180px;
+}
+
+/* Forces line break for long messages */
+.logbook-edition-panel .dataGridCell div {
+    white-space: normal;
+}
+
+.logbook-edition-panel {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.logbook-edition-panel .mainContainer {
+    background: #2F2F2F;
+    border: 1px solid #272727;
+    border-bottom: 1px solid #464646;
+    border-right: 1px solid #464646;
+    border-radius: 5px;
+    padding: 6px 10px;
+    box-shadow: 0px 1px 1px #222 inset;
+    box-sizing: border-box;
+}
+
+.logbook-buttonPanel {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.ec3-flowPanelTable {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ec3-flowPanelTable .ec3-entryPanel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.ec3-flowPanelTable .ec3-entryPanel .ec3-entryKey {
+    /* text-align: right; */
+    /* padding: 5px; */
+}
+
+.ec3-flowPanelTable .ec3-entryPanel .ec3-entryValue {max-width: 60%;}
+

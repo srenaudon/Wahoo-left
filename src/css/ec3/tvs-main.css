@@ -1,0 +1,39 @@
+
+
+
+body {
+    background: #16191A;
+}
+
+#loading-infos {
+    color: white;
+    font-size: 1.4em;
+    line-height: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 35%;
+    width: 50%;
+    margin: 0 25%;
+    height: 30%;
+    text-align:center;
+}
+
+/* Use to set the login panel in the center of the left screen */
+@media screen and (min-aspect-ratio : 17/9) {
+    
+    #loading-infos {margin: 0;}
+}
+
+@font-face {
+	font-family: 'LcdMonospace';
+	font-weight: normal;
+	src: url('../font/LCDMN___.TTF');
+}
+
+@font-face {
+	font-family: 'LcdMonospace';
+	font-weight: bold;
+	src: url('../font/LCDMB___.TTF');
+}
+
+iframe {border: none;}

@@ -1,0 +1,34 @@
+
+/**********************************************/
+/* TAGS TRACK */
+/**********************************************/
+
+.tag-panel {
+	position: absolute;
+	top: 0;
+	width: 20px;
+	height: 100%;
+	cursor: default;
+}
+
+.tag-panel .tag-category {
+	top: 0px;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+}
+
+.tag-panel .tag-category[color="red"] 		{background-image: url('../img/video/tags/tag_red.png');}
+.tag-panel .tag-category[color="orange"] 	{background-image: url('../img/video/tags/tag_orange.png');}
+.tag-panel .tag-category[color="green"] 	{background-image: url('../img/video/tags/tag_green.png');}
+.tag-panel .tag-category[color="blue"] 		{background-image: url('../img/video/tags/tag_blue.png');}
+.tag-panel .tag-category[color="purple"] 	{background-image: url('../img/video/tags/tag_purple.png');}
+.tag-panel .tag-category[color="grey"] 		{background-image: url('../img/video/tags/tag_grey.png');}
+
+/**********************************************/
+/* NVR MAPPING TRACK */
+/**********************************************/
+
+.nvr-mapping-data {background: -webkit-linear-gradient(top, #004C6B, #002C3C);}

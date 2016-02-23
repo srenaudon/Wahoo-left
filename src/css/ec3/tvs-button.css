@@ -1,0 +1,115 @@
+
+/***************************************************/
+/* BUTTON */
+/***************************************************/
+
+button {
+	background: -webkit-linear-gradient(top, #484848, #373737);
+	border-width: 1px;
+	border-color: #202020;
+	border-style: solid;
+	cursor: pointer;
+	color: #BBB;
+	box-shadow: 0 0 3px #202020;
+	border-radius: 3px;
+	height: 24px;
+	vertical-align: middle;
+	margin: 0 3px;
+	box-sizing: border-box;
+	min-width: 35px;
+	font-size: 12px;
+}
+
+button:hover {color: white; background: -webkit-linear-gradient(top, #585858, #474747);}
+button:active {background: #202020;}
+button:active, button:focus {outline: none;}
+
+button[switched],
+button[state="active"] {
+    background: -webkit-linear-gradient(top, #0073a2, #004c6b);
+    box-shadow: 0 0 3px #002533 inset;
+    color: white;
+}
+
+button[image] {
+	width: 34px;
+	position: relative;
+}
+
+button[image]:after {
+	content: "";
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 95%;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+button[image="home-preset"]:after 	{background-image: url('../img/actions/home_preset.png');}
+button[image="unlock"]:after 		{background-image: url('../img/release.png'); background-size: auto 90%;}
+button[image="play-record"]:after 	{background-image: url('../img/play_record.png');}
+button[image="zoom-in"]:after 		{background-image: url('../img/zoom_in.png');}
+button[image="zoom-out"]:after 		{background-image: url('../img/zoom_out.png');}
+button[image="play-backward"]:after {background-image: url('../img/medias/play-backward.png');}
+button[image="pause"]:after 		{background-image: url('../img/medias/pause.png');}
+button[image="stop"]:after 			{background-image: url('../img/medias/stop.png');}
+button[image="play-forward"]:after 	{background-image: url('../img/medias/play_forward.png');}
+button[image="slower"]:after 		{background-image: url('../img/minus.png');}
+button[image="faster"]:after 		{background-image: url('../img/plus.png');}
+button[image="synchronize"]:after 	{background-image: url('../img/synchronize.png');}
+button[image="file-avi"]:after 		{background-image: url('../img/file_avi.png');}
+button[image="protect-track"]:after {background-image: url('../img/protect_track.png');}
+button[image="panel-up"]:after      {background-image: url('../img/up.png'); background-size: auto 70%;}
+button[image="panel-down"]:after    {background-image: url('../img/down.png'); background-size: auto 70%;}
+button[image="back-to-live"]:after  {background-image: url('../img/back_to_live.png');}
+button[image="seamless"]:after      {background-image: url('../img/seamless.png');}
+button[image="menu"]:after          {background-image: url('../img/menu.png');}
+button[image="blank"]:after         {background-image: url('../img/blank.png');}
+button[image="fullscreen"]:after    {background-image: url('../img/fullscreen.png');}
+button[image="screenshot"]:after    {background-image: url('../img/screenshot.png');}
+button[image="preset"]:after        {background-image: url('../img/preset.png');}
+button[image="stream-hq"]:after     {background-image: url('../img/stream-hq.png');}
+button[image="stream-lq"]:after     {background-image: url('../img/stream-lq.png');}
+button[image="stream-unk"]:after    {background-image: url('../img/stream-unk.png');}
+button[image="exit"]:after          {background-image: url('../img/exit.png');}
+button[image="show-on-map"]:after   {background-image: url('../img/show_on_map.png');}
+button[image="numeric-zoom"]:after  {background-image: url('../img/numeric_zoom.png');}
+button[image="play"]:after          {background-image: url('../img/medias/play_forward.png');}
+button[image="prev-step"]:after     {background-image: url('../img/medias/previous_step.png');}
+button[image="next-step"]:after     {background-image: url('../img/medias/next_step.png');}
+button[image="play-rev"]:after      {background-image: url('../img/medias/play-backward.png');}
+button[image="minimize"]:after      {background-image: url('../img/minimize.png');}
+button[image="forward"]:after       {background-image: url('../img/medias/forward.png');}
+button[image="backward"]:after      {background-image: url('../img/medias/rewind.png');}
+button[image="rewind"]:after        {background-image: url('../img/medias/rewind.png');}
+button[image="avi"]:after           {background-image: url('../img/avi.png');}
+button[image="synchro"]:after       {background-image: url('../img/synchronize.png');}
+button[image="repeat"]:after        {background-image: url('../img/icon-repeat.png');}
+button[image="create-tag"]:after    {background-image: url('../img/tag.png');}
+button[image="freeze"]:after        {background-image: url('../img/freeze.png');}
+button[image="slicing-tool"]:after  {background-image: url('../img/video/scissors.png'); background-size: auto 75%;}
+button[image="video-tools"]:after  {background-image: url('../img/video/pencil.png'); background-size: auto 75%;}
+button[image="monitorFitHorizontal"]:after  {background-image: url('../img/icon-mon-fit-h.png');}
+button[image="monitorFitVertical"]:after    {background-image: url('../img/icon-mon-fit-v.png');}
+button[image="monitorFitStretch"]:after     {background-image: url('../img/icon-mon-stretch.png');}
+button[image="timeline-selector"]:after     {background-image: url('../img/timeline_selector.png');}
+button[image="joystick-connected"]:after    {background-image: url('../img/joystick-connected.png');}
+
+
+button:disabled:active,
+button:disabled:hover,
+button:disabled
+{
+	cursor: default;
+	color: #202020;
+	background: -webkit-linear-gradient(top, #484848, #373737);
+}
+
+button[image]:disabled:after {
+	-webkit-filter: brightness(14%);
+}

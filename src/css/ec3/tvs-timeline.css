@@ -1,0 +1,218 @@
+
+/**********************************************/
+/* TIMELINE */
+/**********************************************/
+
+/*-------------------------------------*/
+/* Main */
+
+.tvs-Timeline {
+	position: relative;
+	background: #282D2E;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+.tvs-Timeline table td > .gwt-Label {
+    padding: 1px 4px;
+}
+
+/*-------------------------------------*/
+/* Header */
+
+.tvs-Timeline .tvs-timeline-header {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #111;
+	border-bottom: 1px solid #111;
+	box-shadow: 0 0 5px black;
+	background: #1B1E1F;
+}
+
+.tvs-Timeline .tvs-timeline-header td {
+	padding: 0;
+	border-right: 1px solid #111;
+	text-align: center;
+}
+
+.tvs-Timeline .tvs-timeline-header td:last-child {border-right: none;}
+
+.tvs-Timeline .tvs-timeline-header .track-header-panel {
+	position: relative;
+	height: 20px;
+}
+
+.tvs-Timeline .tvs-timeline-header .time-steps-panel {
+    text-align: left;
+    height : 100%;
+}
+
+.tvs-Timeline .time-steps-panel .time-step {
+	position: absolute;
+	display: inline-block;
+	border-left: 1px dashed #494949;
+	height: 1000px;
+	padding: 3px 0 0 4px;
+	font-size: 0.9em;
+	box-sizing: border-box;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: left;
+}
+
+/*-------------------------------------*/
+/* Tracks */
+
+.tvs-Timeline .tvs-timeline-tracks {
+	width:100%;
+	border-collapse:collapse;
+	margin-top: 10px;
+}
+
+.tvs-Timeline input[type="radio"] {margin: auto;}
+
+.tvs-Timeline .tvs-timeline-tracks td {padding: 0; background: rgba(0,0,0,0.2); text-align: center;}
+.tvs-Timeline .tvs-timeline-tracks tr {border-bottom: 5px solid #282D2E;}
+
+.tvs-Timeline .tvs-timeline-tracks .tvs-timeline-track {
+	display: block;
+	width: 100%;
+	height: 20px;
+    position: relative;
+    cursor: url('../img/video/selector_cursor.png'), pointer;
+    z-index: 0;
+    overflow: hidden;
+    margin-left: 1px;
+	background-size: 500px 3px;
+	background-repeat: repeat-x;
+}
+
+.tvs-Timeline .tvs-timeline-tracks .tvs-timeline-track.loading {
+	background-image: -webkit-linear-gradient(left, #707070, #303030, #707070);
+	-webkit-animation: move 1s linear infinite;
+}
+
+@-webkit-keyframes move {
+	0% {background-position: 0 center;}
+	100% {background-position: 500px center;}
+}
+
+/*-------------------------------------*/
+/* Tag */
+
+.tvs-TimelineTag {
+    position: absolute;
+    margin: 6px 0;
+    padding: 4px;
+    border-radius: 6px;
+    background: #1b1e1f;
+    border: 1px solid white;
+    white-space: nowrap;
+    font-size: 0.9em;
+    box-shadow: 0 0 12px black;
+    z-index: 1;
+}
+
+.tvs-TimelineCursor .tvs-TimelineTag {
+    top: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+    padding: 3px 0 0 10px;
+    z-index: 0;
+}
+
+/*-------------------------------------*/
+/* Cursor */
+
+.tvs-TimelineCursor {
+    position: absolute;
+    height: 1000px;
+    width: 9px;
+    margin-left: -4px;
+    left: 250px;
+    top: 0;
+    background: -webkit-linear-gradient(
+		left,
+		transparent 0px, transparent 3px,
+		white 3px, white 4px,
+		transparent 4px, transparent);
+    cursor: ew-resize;
+    z-index: 1;
+}
+
+.tvs-TimelineCursor img {
+    position: relative;
+    left: -1px;
+    width: 9px;
+}
+
+.tvs-TimelineCursor .tvs-TimelineTag {bottom: 100%;}
+
+/*-------------------------------------*/
+/* Selector */
+
+.tvs-TimelineSelector {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    border-color: #00A2E4;
+    border-width: 2px 6px;
+    border-style: solid;
+    border-radius: 2px;
+    left: 84px;
+    right: 300px;
+    z-index: 3;
+}
+
+.tvs-TimelineSelector .tvs-TimelineSelector-right,
+.tvs-TimelineSelector .tvs-TimelineSelector-left {
+	position: absolute;
+	height: 120%;
+	width: 6px;
+	cursor: ew-resize;
+}
+
+.tvs-TimelineSelector .tvs-TimelineSelector-right {right: -6px;}
+.tvs-TimelineSelector .tvs-TimelineSelector-left {left: -6px;}
+
+
+#timeline .toolbar .cursor-position {
+    display: inline-block;
+    font-family: LcdMonospace, monospace;
+    background: black;
+    letter-spacing: 2px;
+    line-height: 26px;
+    padding: 0 10px;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin: 0 3px;
+}
+
+#timeline .toolbar .replay-speed-label {
+    display: inline-block;
+    letter-spacing: 2px;
+    line-height: 26px;
+    padding: 0;
+    width: 40px;
+    border-radius: 5px;
+    vertical-align: middle;
+    border: none;
+}
+
+/* Date Time Picker */
+
+#timeline .tvs-DateTimePickerPanel {
+    z-index: 1;
+    background: #373737;
+}
+
+
+#timeline .tvs-DateTimePickerPanel table {margin: auto;}
+#timeline .tvs-DateTimePickerPanel table td {padding: 0 10px;}
+#timeline .tvs-DateTimePickerPanel .buttons-panel button {display: block; width: 80px; margin: 10px;}

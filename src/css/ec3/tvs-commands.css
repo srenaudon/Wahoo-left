@@ -1,0 +1,8 @@
+
+/***************************************************/
+/* HYP COMMAND PANEL */
+/***************************************************/
+
+.mwt-command-panel {width: 100%; background: none; border-collapse: collapse;}
+.mwt-command-entry {border: none !important; border-bottom: 1px solid #111 !important;}
+.mwt-command-panel-header img {width: 44px;}

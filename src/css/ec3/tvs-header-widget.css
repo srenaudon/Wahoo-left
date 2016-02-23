@@ -1,0 +1,95 @@
+/***************************************************/
+/* CLOCK WIDGET */
+/***************************************************/
+
+#clock-widget {
+	line-height: 46px;
+	font-size: 1.2em;
+	font-family: LcdMonospace, monospace;
+	font-weight: normal;
+	display: inline;
+	padding: 5px 8px;
+	letter-spacing: 3px;
+}
+
+/***************************************************/
+/* APP LAYOUT SELECTOR */
+/***************************************************/
+
+#app-layout-selector {
+    /*margin-top: 10px;*/
+}
+
+/***************************************************/
+/* LOGO WIDGET */
+/***************************************************/
+
+#app-logo {
+	height: 46px;
+}
+
+/***************************************************/
+/* FLAT BUTTON WIDGET */
+/***************************************************/
+
+button.flat-button {
+    border: none;
+    background-color: transparent;
+    width:30px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+button.flat-button[state="unactive"] {background-position: center 0px; border:none; padding:none;}
+button.flat-button[state="active"] {background-position: center -30px; border:none; padding:none;}
+button.flat-button:hover {background-position: center -60px; border:none; padding:none; cursor: pointer;}
+button.flat-button:active {background-position: center -30px; border:none; padding:none;}
+
+#logout-button {background-image: url('../img/logout.png');}
+#joystick-button {background-image: url('../img/joystick-connected.png');}
+
+/***************************************************/
+/* LINK ICON WIDGET */
+/***************************************************/
+
+#tomcat-link-status {
+    background-image: url('../img/network.png');
+    width:30px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+}
+
+#tomcat-link-status[state="unactive"] {background-position: center 0px;}
+#tomcat-link-status[state="active"] {background-position: center -30px;}
+#tomcat-link-status[state="error"] {background-position: center -60px;}
+
+/***************************************************/
+/* OPERATOR NAME WIDGET */
+/***************************************************/
+
+#operator-name-widget {
+    font-size: 1.6em;
+    line-height: 46px;
+}
+
+#operator-name-widget .role {
+    font-size: 0.6em;
+	color: #999;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+/***************************************************/
+/* WEBAPP VERSION WIDGET */
+/***************************************************/
+
+#webapp-version-widget {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 46px;
+	font-size: 1.1em;
+}

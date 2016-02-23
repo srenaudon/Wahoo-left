@@ -1,0 +1,250 @@
+
+/***************************************************/
+/* VIDEO DISPLET */
+/***************************************************/
+
+.video-displet {
+	border-style: solid;
+	border-width: 2px;
+    box-sizing: border-box;
+}
+
+.video-displet[highlight="none"] {border-color: #16191a;}
+.video-displet[highlight="locked"] {border-color: #00ff10;}
+.video-displet[highlight="seamless"] {border-color: #287C1D;}
+.video-displet[highlight="replay"] {border-color: #ff1010;}
+.video-displet[highlight="selected"] {border-color: #0073A2;}
+
+/***************************************************/
+/* VIDEO DISPLET - HEADER */
+/* WILL BE DELETED WHEN STATUS INTEGRATED IN TVP */
+/***************************************************/
+
+.video-displet-title {
+	top: 0;
+	position: absolute;
+	left: 52px;
+	line-height: 26px;
+}
+
+.video-displet .container-header {background: black; border: none;}
+
+.video-displet .container-header .gwt-Button {
+    background-size: 26px 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px;
+}
+
+.video-displet .container-header .gwt-Button[image="avi"] {background-image: url('../img/avi.png');}
+.video-displet .container-header .gwt-Button[image="CM"] {background-image: url('../img/CM.png');}
+.video-displet .container-header .gwt-Button[image="CF"] {background-image: url('../img/CF.png');}
+.video-displet .container-header .gwt-Button[image="CDM"] {background-image: url('../img/CDM.png');}
+.video-displet .container-header .gwt-Button[image="CDF"] {background-image: url('../img/CDF.png');}
+.video-displet .container-header .gwt-Button[image="cycle"] {background-image: url('../img/cycle.png');}
+.video-displet .container-header .gwt-Button[image="monitor"] {background-image: url('../img/monitor.png');}
+.video-displet .container-header .gwt-Button[image="WEB"] {background-image: url('../img/web.png');}
+
+.video-displet .container-header .gwt-Label {
+    background-size: 26px 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.video-displet .gwt-Label[image="status_locked"] {background-image: url('../img/status_locked.png');}
+.video-displet .gwt-Label[image="status_recording"] {background-image: url('../img/status_recording.png');}
+.video-displet .gwt-Label[image="status_unreachable"] {background-image: url('../img/status_unreachable.png');}
+.video-displet .gwt-Label[image="status_vmd"] {background-image: url('../img/status_vmd.png');}
+
+.video-displet .gwt-Label[image="status_UNK"] {
+	background-image: url('../img/status_unk.png');
+    background-position: center;
+	background-size: 24px 24px;
+    background-repeat: no-repeat;
+}
+.video-displet .gwt-Label[image="status_HQ"] {
+	background-image: url('../img/status_hq.png');
+    background-position: center;
+	background-size: 24px 24px;
+    background-repeat: no-repeat;
+}
+.video-displet .gwt-Label[image="status_LQ"] {
+	background-image: url('../img/status_lq.png');
+    background-position: center;
+	background-size: 24px 24px;
+    background-repeat: no-repeat;
+}
+.video-displet .gwt-Label[image="status_frozen"] {
+	background-image: url('../img/status_frozen.png');
+    background-position: center;
+	background-size: 30px 24px;
+    background-repeat: no-repeat;
+}
+
+.video-displet .gwt-Label[image="status_live"] {
+	margin-left: 2px;
+	margin-right: 2px;
+    background-position: center;
+	background-size: 90px 20px;
+    background-repeat: no-repeat;
+	background-image: url('../img/status_live.png');
+}
+.video-displet .gwt-Label[image="status_seamless"] {
+	margin-left: 2px;
+	margin-right: 2px;
+	background-position: center;
+	background-size: 90px 20px;
+    background-repeat: no-repeat;
+	background-image: url('../img/status_seamless.png');
+}
+.video-displet .gwt-Label[image="status_replay"] {
+	margin-left: 2px;
+	margin-right: 2px;
+	background-position: center;
+	background-size: 90px 20px;
+    background-repeat: no-repeat;
+	background-image: url('../img/status_replay.png');
+}
+
+.replay-speed-label {
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 14px;
+}
+
+/***************************************************/
+/* TOOL BAR */
+/***************************************************/
+
+.video-toolbar-container {
+	margin: 2px;
+    height: 30px;
+    margin-top: -32px;
+}
+
+.video-toolbar {
+    background: -webkit-linear-gradient(top, #2D3233, #1B1E1F);
+    background: -moz-linear-gradient(top, #2D3233, #1B1E1F);
+    background: -ms-linear-gradient(top, #2D3233, #1B1E1F);
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
+}
+
+.video-toolbar button[position="left"],
+.video-toolbar .seamless-slider[position="left"],
+.video-toolbar div[image="screenshot"][position="left"],
+.video-toolbar .replay-speed-label[position="left"] {
+	float: left;
+	border-right: 1px solid black;
+}
+
+.video-toolbar button[position="right"],
+.video-toolbar .seamless-slider[position="right"],
+.video-toolbar div[image="screenshot"][position="right"],
+.video-toolbar .replay-speed-label[position="right"] {
+	float: right;
+	border-left: 1px solid black;
+}
+
+
+.video-toolbar button {
+    border: none;
+    height:30px;
+    max-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 0;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.video-toolbar button:hover {
+    background: #373737;
+}
+
+.video-toolbar button:active {
+    background: black;
+}
+
+.video-toolbar a {
+	position: absolute;
+    min-width: 36px; 
+    height: 27px;
+}
+
+.video-toolbar .toolbar .gwt-Label {
+	font-size: 14px;
+	color: white;
+	line-height: 26px;
+	font-family: Arial;
+	padding: 0 10px;
+}
+
+.replay-buttonbar .gwt-Label {
+	font-size: 14px;
+	color: white;
+	line-height: 30px;
+	font-family: Arial;
+	padding: 0 10px;
+	border-right: 1px solid black;
+}
+
+.video-toolbar .seamless-slider {
+	width: 30%; 
+	height: 30px;
+	display: inline-block;
+    background-image: url('../img/slider-bg.png');
+    background-size: 100% 30px;
+    background-position: center;
+    margin: 0 10px;
+    border: none !important;
+    position: relative;
+}
+
+.video-toolbar .seamless-slider .gwt-Label {
+    background-image: url('../img/slider-grip.png');
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-left: -14px;
+}
+
+.gwt-DateBox {
+	background-color: #16191A;
+	border: 1px solid #3A4042;
+	border-radius: 6px;
+	padding: 4px;
+	color: white;
+	font-size: 1em;
+}
+
+/*--------------------------------------------*/
+/* SCREENSHOT */
+/* The screenshot feature needs to use a link
+   to download the image. We can't use a button.
+   Instead we use a link included in a div */
+/*--------------------------------------------*/
+
+.video-toolbar div[image="screenshot"] {
+    border: none;
+    background-color: transparent;
+    width:38px;
+    height:27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 95%;
+    background-image: url('../img/screenshot.png');
+    margin: 0px;
+    cursor: pointer;
+}
+
+.video-toolbar div[image="screenshot"]:hover {background-color: #373737;}
+
+.video-toolbar div[image="screenshot"]:active {background-color: #202020;}
+
+/*--------------------------------------------*/
+

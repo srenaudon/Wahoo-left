@@ -1,0 +1,73 @@
+
+/***************************************************/
+/* MAIN */
+/***************************************************/
+
+.grid {background-color: transparent;}
+.mainContainer {background-color: transparent;}
+
+/***************************************************/
+/* HEADER */
+/***************************************************/
+
+.dataGridHeader {
+    padding: 2px 5px;
+    text-align: left;
+    overflow: hidden;
+    background: #202020;
+    border-left: 1px solid #404040;
+    border-bottom: 1px solid #111;
+}
+.dataGridFirstColumnHeader {border-left: none;}
+.dataGridSortableHeader:hover {color: #00A2E4;}
+
+/***************************************************/
+/* CONTENT */
+/***************************************************/
+
+.dataGridCell {cursor: pointer;}
+.alarm .dataGridCell {color: #FFA500;}
+.alarm.dataGridSelectedRow .dataGridCell { color: #000000; }
+.dataGridKeyboardSelectedRow.alarm {background: #FFA500 !important;}
+.dataGridSelectedRow.alarm {background: #FFA500;}
+/* Need to specify !important because hyp hovered style contains also !important */
+.dataGridSelectedRowCell {background: #0073A2 !important;}
+
+/***************************************************/
+/* TVS GRID */
+/***************************************************/
+
+.tvsgrid .header,
+.tvsgrid .content,
+.tvsgrid .pager {
+    position: absolute;
+    width: 100%;
+}
+
+.tvsgrid .header,
+.tvsgrid .pager {
+    height: 20px;
+    border-spacing: 0;
+    font-weight: normal;
+    background: #202020;
+    box-shadow: 0 0 1px #111;
+    z-index: 1;
+}
+
+.tvsgrid .header {top: 0; border-right: 8px solid transparent; text-align: left; border-bottom: 1px solid #111;}
+.tvsgrid .content {top: 20px; bottom: 20px; overflow-y: scroll; text-align: left;}
+.tvsgrid .pager {bottom: 0; text-align: center; border-top: 1px solid #111;}
+
+
+.tvsgrid .header td {padding: 2px 5px; text-align: left; overflow: hidden; border-left: 1px solid #404040;}
+.tvsgrid .header td:nth-child(1) {border-color: transparent;}
+
+.tvsgrid .content > table {width: 100%; border-spacing: 0; table-layout: fixed;}
+.tvsgrid .content tr {cursor: pointer;}
+.tvsgrid .content td {padding: 2px 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.tvsgrid .content tr:nth-child(odd) {background: #303030;}
+.tvsgrid .content tr:nth-child(even) {background: #373737;}
+.tvsgrid .content tr:hover {background: #484848;}
+.tvsgrid .content tr.selected {background: #0073a2;}
+.tvsgrid .content td .gwt-HTML {cursor: pointer; text-overflow: ellipsis; overflow: hidden;}
+

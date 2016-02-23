@@ -1,0 +1,80 @@
+
+#editing-tool .content {
+    text-align: center;
+    padding: 8px;
+}
+
+#editing-tool .content .inner-panel {
+    display: inline-block;
+    height:100%;
+    vertical-align: top;
+    padding: 0px 5px;
+    width: 13%;
+    max-width: 230px;
+}
+
+#editing-tool .inner-panel-content {
+    overflow-y: auto;
+    height: 100%;
+    position: relative;
+}
+
+#editing-tool .inner-panel-content .glass-panel {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#editing-tool .inner-panel-content[disabled] > * {-webkit-filter: opacity(0.1);}
+
+#editing-tool .inner-panel-content .editing-panel-title {
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 3px;
+}
+
+#editing-tool .inner-panel-content .editing-panel-content {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+#editing-tool .comment textarea {resize: none;}
+
+#editing-tool .actions .gwt-CheckBox {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+#editing-tool .buttons-panel {display: inline-block;}
+#editing-tool .buttons-panel button {width: 70px; margin: 10px; display: block;}
+
+#editing-tool .timestamp .event-timestamp-label {margin-bottom: 10px; text-align: center;}
+#editing-tool .timestamp .bound-offset-unit {display: inline;}
+
+#editing-tool .timestamp .tvs-NumericBox {
+    margin: 3px;
+    margin-left: 0;
+}
+
+#editing-tool .stream .stream-list {
+    margin-top: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+}
+
+#editing-tool .locations .locations-list {
+    width: 100%;
+    height: 80%;
+}
+
+#editing-tool .stream .stream-list .listbox-item,
+#editing-tool .locations .locations-list .listbox-item {padding: 0 2px;}

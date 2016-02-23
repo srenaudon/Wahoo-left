@@ -1,0 +1,45 @@
+
+#clips-list button.clipslist-filter-button {
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-image: url('../img/clips/filter.png');
+	padding-left: 15px;
+	background-color: transparent;
+	color: white;
+	border: none;
+	cursor: pointer;
+	height: 15px;
+	border-right: 1px solid #2d3233;
+	font-size: 1em;
+	position: absolute;
+    bottom: 3px;
+    z-index: 1;
+    background-size: 10px;
+}
+
+#clips-list button.clipslist-filter-button[state="active"] {
+	background-image: url('../img/clips/filter_active.png');
+}
+
+#clips-list button.clipslist-filter-button:hover {color: #00A2E4;}
+
+#clips-list .clipslist-filter-panel {
+	padding: 5px;
+	height: 100%;
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+
+#clips-list .clipslist-filter-panel > table {width: 100%;}
+
+#clips-list .clipslist-filter-panel-buttons {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+
+#clips-list .clipslist-filter-panel-buttons button {
+	width: 80px;
+}

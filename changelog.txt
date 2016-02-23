@@ -1,0 +1,5 @@
+Modification du template de l'application
+-----------------------------------------
+from: {project}/template/tvs-layout.xml
+to  : {tomcat}/conf/tvs-conf/projectConf
+

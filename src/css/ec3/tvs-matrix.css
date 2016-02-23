@@ -1,0 +1,23 @@
+
+
+#connectionmatrix-widget {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.mwt-gm {background: none; height: 100%;}
+.mwt-gm-label-text-default {font-size: inherit; font-weight: normal;}
+.mwt-gm-coefficient-connection {font-size: inherit; font-weight: normal;}
+.mwt-gm-frame-default {stroke: none;}
+.mwt-gm-line-default {stroke: #777;}
+.mwt-gm-panel-connection .mwt-gm-label-text-selected {fill: #00A2E4; font-size: inherit; font-weight: normal;}
+.mwt-gm-panel-connection .mwt-gm-line-selected {stroke-width: 1px;}
+.mwt-gm-panel-connection .mwt-gm-square-outer-selected {fill: none; stroke: none;}
+.mwt-gm-panel-connection .mwt-gm-frame-selected {stroke: none;}
+
+.mwt-gm-square-connection-active {fill: rgb(0,135,0); stroke: rgb(0,135,0);}
+.mwt-gm-square-connection-warning {fill: rgb(255,165,0); stroke: rgb(255,165,0);}
+.mwt-gm-square-connection-unknown {fill: rgb(255,165,0); stroke: rgb(255,165,0);}
+.mwt-gm-square-connection-error {fill: rgb(208,0,0); stroke: rgb(208,0,0);}
+
+.mwt-gm-label-text-default:hover {fill: #00A2E4;}

@@ -1,0 +1,58 @@
+
+#preset-editor {}
+
+#preset-editor .inner-panel-content table {width: 100%; border-collapse: collapse;}
+
+#preset-editor .camera-label {text-align: center;}
+#preset-editor .camera-label[state="info"] {color: white;}
+#preset-editor .camera-label[state="warn"] {color: orange;}
+
+#preset-editor .buttons-panel button{width: 28%;}
+
+#preset-editor .buttons-panel {
+	text-align: right;
+    padding: 0 10px;
+}
+
+#preset-editor .preset-list-item {
+    position: relative;
+    height: 22px;
+    background: #252525;
+    margin: 4px 0px;
+    border-radius: 3px;
+}
+
+#preset-editor .preset-list-item:last-child {margin-bottom: 0;}
+#preset-editor .preset-list-item:first-child {margin-top: 0;}
+#preset-editor .preset-list-item:hover {color: #00A2E4; cursor: pointer;}
+
+
+#preset-editor .preset-list-item > * {position: absolute; top: 0px; height: 18px; margin: 2px;}
+#preset-editor .preset-list-item .preset-cat {width: 18px; left: 2px;}
+#preset-editor .preset-list-item .preset-home {width: 16px; height: 16px; right: 30px; margin: 3px; z-index:1;}
+#preset-editor .preset-list-item .preset-name {
+	left: 26px; 
+	right: 42px; 
+	line-height: 18px; 
+    cursor: pointer;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#preset-editor .preset-list-item .preset-delete {
+	position: absolute;
+    right: 0px;
+    width: 16px; 
+	height: 16px;
+	margin: 3px;
+	border: none;
+	background-image: url('../img/presets/trash.png');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center 0px;
+	background-size: 16px;
+}
+
+#preset-editor .preset-list-item .preset-delete:hover {background-position: center -16px;}
+

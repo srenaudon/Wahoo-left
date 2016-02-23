@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="./lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="./lib/gridster/jquery.gridster.min.js"></script>
+    <script src="./lib/kendoui/js/kendo.all.min.js"></script>
+
+
+
+
+    <link href="./lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css">
+    <link href="./lib/kendoui/styles/kendo.metroblack.min.css" rel="stylesheet" type="text/css">
+    <link href="./lib/gridster/jquery.gridster.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/ec3/ec3.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/wa/wa.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<style>
+
+    /* Team load factor */
+    .k-chart.small-chart {
+        display: block;
+        width: 200px;
+        height: 200px;
+        float:left;
+    }
+
+</style>
+<body>
+<div class="wa-grid gridster">
+    <ul>
+        <li  data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <div class="wa-grid-cell">
+            <div class="wa-kpi" id="chart"></div>
+            </div>
+        </li>
+        <li  data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+            <div class="wa-grid-cell">
+            <div class="wa-kpi" id="gauge"></div>
+            </div>
+        </li>
+        <li  data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+            <div class="wa-grid-cell">
+            <div class="wa-kpi">
+                <div id="chart-supervisor" class="small-chart"></div>
+                <div id="chart-liaison-officer" class="small-chart"></div>
+                <div id="chart-call-taker" class="small-chart"></div>
+
+            </div>
+            </div>
+        </li>
+        <li  data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+            <div class="wa-grid-cell">
+            <div class="wa-kpi" id="backlog"></div>
+            </div>
+        </li>
+        <li  data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+            <div class="wa-grid-cell">
+            <div class="wa-kpi" id="taxi-trips"></div>
+            </div>
+        </li>
+        <li  data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+            <div class="wa-grid-cell">
+            <div class="wa-kpi" id="bus-occupancy" style="padding-top:150px;width:450px;height:50px"></div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<script>
+
+    /* grid initialization */
+    var gridster;
+
+    $(function () {
+
+        gridster = $(".wa-grid ul").gridster({
+            widget_base_dimensions: [620, 280],
+            widget_margins: [10, 10],
+            extra_rows: 0,
+            extra_rows: 0,
+            extra_cols: 0,
+            helper: 'clone'
+        }).data('gridster');
+
+
+        // resize widgets on hover
+        /* gridster.$el
+         .on('mouseenter', '> li', function() {
+         gridster.resize_widget($(this), 3, 3);
+         })
+         .on('mouseleave', '> li', function() {
+         gridster.resize_widget($(this), 1, 1);
+         });*/
+
+
+        /* Activity KPI */
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    text: "Activity since last hour"
+                },
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        color: '#fff'
+                    }
+
+                },
+                chartArea: {
+                    background: ""
+                },
+                seriesDefaults: {
+                    type: "line",
+                    style: "smooth"
+                },
+                series: [{
+                    name: "Alarm",
+                    data: [3, 7, 7, 9, 8, 6, 5, 3, 2, 3]
+                }, {
+                    name: "Event",
+                    data: [2, 3, 4, 8, 8, 7, 7, 4, 2, 1]
+                }, {
+                    name: "Crisis",
+                    data: [0, 0, 0, 1, 2, 2, 2, 2, 1, 1]
+                }],
+                valueAxis: {
+                    labels: {
+                        format: "{0}",
+                        color: '#fff'
+                    },
+                    line: {
+                        visible: false
+                    },
+                    axisCrossingValue: 0
+                },
+                categoryAxis: {
+                    categories: [0, 10, 20, 30, 40, 50, 60],
+                    majorGridLines: {
+                        visible: false
+                    },
+                    labels: {
+                        rotation: "auto",
+                        color: '#fff'
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0}",
+                    template: "#= series.name #: #= value #"
+                }
+            });
+        }
+
+        createChart();
+
+        /* average speed */
+        function createGauge() {
+            $("#gauge").kendoRadialGauge({
+                title: {
+                    text: "Average speed in km/h"
+                },
+                pointer: {
+                    value: 60
+                },
+
+                scale: {
+                    minorUnit: 5,
+                    startAngle: -30,
+                    endAngle: 210,
+                    max: 180,
+
+                    ranges: [{
+                        from: 90,
+                        to: 120,
+                        color: '#ff7a00'
+                    },
+                        {
+                            from: 120,
+                            to: 180,
+                            color: '#c20000'
+                        }],
+
+                    labels: {
+                        color: '#fff',
+                        border: {
+                            color: '#fff'
+                        }
+                    }
+                }
+
+            });
+        }
+
+        createGauge();
+
+        /* Team load factor */
+        function createSmallPie(id, data,title) {
+            $("#" + id).kendoChart({
+
+                dataSource: {
+                    data: data
+                },
+                title: {
+                    text: title
+                },
+                /*legend: {
+                    position: "top"
+                },*/
+                seriesDefaults: {
+                    type: "pie"
+                },
+
+                series: [{
+                    type: "pie",
+                    field: "percentage",
+                    categoryField: "source",
+                    explodeField: "explode"
+                }],
+                tooltip: {
+                    visible: true,
+                    format: "N0",
+                    template: "#= category # - #= kendo.format('{0:P}', percentage)#"
+                }
+            });
+        }
+
+        var dataSupervisor = [
+            {
+                "source": "free",
+                "percentage": 22,
+                "explode": true
+            },
+            {
+                "source": "occupied",
+                "percentage": 78
+            }
+        ];
+        var dataCaller = [
+            {
+                "source": "free",
+                "percentage": 10,
+                "explode": true
+            },
+            {
+                "source": "occupied",
+                "percentage": 90
+            }
+        ];
+        var dataLiaison = [
+            {
+                "source": "free",
+                "percentage": 30,
+                "explode": true
+            },
+            {
+                "source": "occupied",
+                "percentage": 70
+            }
+        ];
+
+
+        function createPie() {
+            createSmallPie("chart-supervisor",dataSupervisor,"Supervisor");
+            createSmallPie("chart-liaison-officer",dataLiaison,"Liaison Officer");
+            createSmallPie("chart-call-taker",dataCaller,"Data Caller");
+        }
+        createPie();
+
+
+        /* Backlog  */
+        $("#backlog").kendoChart({
+            title: {
+                text: "Alarms and Events backlog"
+            },
+            legend: {
+                visible: true
+            },
+            seriesDefaults: {
+                type: "column",
+                stack: {
+                    type: "100%"
+                }
+            },
+            series: [{
+                name: "pending",
+                stack: {
+                    group: "alarm"
+                },
+                data: [140]
+            }, {
+                name: "read",
+                stack: {
+                    group: "alarm"
+                },
+                data: [65]
+            }, {
+                name: "pending",
+                stack: {
+                    group: "event"
+                },
+                data: [67]
+            }, {
+                name: "red",
+                stack: {
+                    group: "event"
+                },
+                data: [50]
+            }, {
+                name: "in progress",
+                stack: {
+                    group: "event"
+                },
+                data: [37]
+            }, {
+                name: "solved",
+                stack: {
+                    group: "event"
+                },
+                data: [20]
+            }],
+            seriesColors: ["#cd1533", "#d43851",
+                "#cd1533", "#d43851","#73c8e9", "green"],
+            valueAxis: {
+                line: {
+                    visible: false
+                }
+            },
+            categoryAxis: {
+                line: {
+                    visible: false
+                }
+            },
+            tooltip: {
+                visible: true,
+                template: "#= series.stack.group #s, age #= series.name #"
+            }
+        });
+
+        /* Taxi trip KPI */
+        function createTaxiTrip() {
+            $("#taxi-trips").kendoChart({
+                title: {
+                    text: "Activity since last hour"
+                },
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        color: '#fff'
+                    }
+
+                },
+                chartArea: {
+                    background: ""
+                },
+                seriesDefaults: {
+                    type: "line",
+                    style: "smooth"
+                },
+                series: [{
+                    name: "taxi trip",
+                    data: [700,800,2000,2200,2300,2180,1900,1800,1649,1300,1240,1319,1450,1800,1900,2000,2300,2000,1900,1300,1100,800]
+                }],
+                valueAxis: {
+                    labels: {
+                        format: "{0}",
+                        color: '#fff'
+                    },
+                    line: {
+                        visible: false
+                    },
+                    axisCrossingValue: 0
+                },
+                categoryAxis: {
+                    categories: [0, 4, 8, 12, 16, 20, 24],
+                    majorGridLines: {
+                        visible: false
+                    },
+                    labels: {
+                        rotation: "auto",
+                        color: '#fff'
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0}",
+                    template: "#= series.name #: #= value #"
+                }
+
+            });
+        }
+
+        createTaxiTrip();
+    });
+
+    /* Bus line occupancy */
+    $("#bus-occupancy").kendoChart({
+        legend: {
+            visible: false
+        },
+        series: [{
+            type: "bullet",
+            data: [[1450, 1300]]
+        }],
+        categoryAxis: {
+            majorGridLines: {
+                visible: false
+            },
+            majorTicks: {
+                visible: false
+            }
+        },
+        valueAxis: [{
+            plotBands: [{
+                from: 0, to: 500, color: "yellow", opacity: .3
+            }, {
+                from: 500, to: 1500, color: "orange", opacity: .3
+            }, {
+                from: 1500, to: 2000, color: "red", opacity: .3
+            }],
+            majorGridLines: {
+                visible: false
+            },
+            min: 0,
+            max: 2000,
+            minorTicks: {
+                visible: false
+            }
+        }],
+        tooltip: {
+            visible: true,
+            template: "Maximum: #= value.target # <br /> Average: #= value.current #"
+        }
+    });
+
+
+
+</script>
+</body>
+</html>

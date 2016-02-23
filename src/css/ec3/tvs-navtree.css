@@ -1,0 +1,46 @@
+
+/***************************************************/
+/* TREE */
+/***************************************************/
+
+#filternavtree-widget .gwt-Tree {cursor: pointer; padding: 5px 0;}
+
+/***************************************************/
+/* TREE ITEM */
+/***************************************************/
+
+#filternavtree-widget .gwt-TreeItem .gwt-HTML {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#filternavtree-widget .item-hover .gwt-HTML {
+	background: #484f52;
+	color: white;
+	font-weight: normal;
+}
+
+#filternavtree-widget .selected .gwt-HTML {
+	background: #0073a2;
+	color: white;
+	box-shadow: 0 0 1px #00A2E4;
+}
+
+/***************************************************/
+/* ITEM CONTENT */
+/***************************************************/
+
+#filternavtree-widget .gwt-Tree .item img.item-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	float: left;
+}
+
+/***************************************************/
+/* TREE CONTAINER */
+/***************************************************/
+
+.navtree-scroll-panel {padding-right: 5px;}

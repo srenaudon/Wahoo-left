@@ -1,0 +1,9 @@
+
+.tvsgrid .camera-icon {height:16px;}
+.tvsgrid .path-separator {
+	background: url('../img/common/separator.png');
+	width: 18px;
+	display: inline-block;
+	background-size: 14px;
+	background-position: center;
+}

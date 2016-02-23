@@ -1,0 +1,58 @@
+
+/***************************************************/
+/* SITUATION VIEW */
+/***************************************************/
+
+.mwt-sv-container {
+	background-color: #1F2324;
+}
+
+/***************************************************/
+/* CONTEXT MENU */
+/***************************************************/
+
+.mwt-context-menu {
+	border: 1px solid white;
+	border-radius: 6px;
+	background-color: #1F2324;
+	font-size: 1em;
+	opacity: 0.999;
+	padding: 5px;
+	box-shadow: 0px 0px 20px black;
+}
+
+.mwt-context-menu .mwt-MenuItem {
+	color: white; 
+	font-size: 1.1em; 
+	border: none;
+	line-height: 1em;
+	border-radius: 2px;
+	min-width: 150px;
+}
+
+.mwt-MenuItem .gwt-Label {cursor: pointer;}
+
+.mwt-context-menu .mwt-MenuItem:hover {
+    background-color: #0073A2 !important;
+	border: none;
+	box-shadow: 0 0 1px #00A2E4;
+}
+
+.mwt-context-menu .mwt-MenuItem-disabled:hover {background-color: transparent !important; border: none; cursor:default; box-shadow:none;}
+.mwt-context-menu .mwt-MenuItem-disabled .gwt-Label {color: #505050 !important;}
+
+.mwt-context-menu .menuSeparatorInner {margin: 4px 0; border: none; background-color: #484848;}
+
+/***************************************************/
+/* SITUATION VIEW */
+/***************************************************/
+
+.mwt-sv-cfg-entity .highlight {
+	stroke: #00A2E4;
+	fill: #00A2E4;
+}
+
+.mwt-sv-info-bar {
+    background: #202020;
+    padding: 6px;
+}

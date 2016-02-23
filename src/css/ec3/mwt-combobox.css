@@ -1,0 +1,61 @@
+/**
+*	ComboBox
+**/
+.mwt-focusPanel {
+	/*margin: 0px auto;*/
+}
+
+.mwt-combobox {
+	/*margin: 0px auto;*/
+	width: 170px;	
+}
+.mwt-combobox-selected {
+	/*margin: 0px auto;*/
+	width: 170px;
+}
+
+
+.mwt-combobox > * {
+	display: none;	
+}
+
+.mwt-combobox-selected > * {
+	cursor: pointer;
+}
+
+
+.mwt-combobox-selected .selected {
+	display: block;
+    background: #3D4D54;
+    padding-left: 2px;	
+}
+
+.mwt-combobox .origin {
+	display: block;
+	padding-left: 2px;
+    background: #373737 url(./../Images/comboboxDown.png) no-repeat right;	
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.mwt-combobox-selected .origin {
+	display: block;
+	padding-left: 2px;
+    background: #373737 url(./../Images/comboboxDown.png) no-repeat right;	
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.mwt-combobox-options {
+	z-index: 2;
+	position: absolute;
+	background-color: #373737;/* PATTERN : GREY-4 */
+	border: 1px solid black;
+	overflow: auto;
+	cursor: pointer;
+}
+
+.mwt-combobox-options .gwt-HTML:hover {
+	background-color: #707070;/* PATTERN : GREY-2 */
+}
+

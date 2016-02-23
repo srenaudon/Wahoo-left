@@ -1,0 +1,245 @@
+
+/***************************************************/
+/* INPUTS */
+/***************************************************/
+
+.gwt-CheckBox input[type="checkbox"] {cursor: pointer;}
+.gwt-CheckBox input[type="checkbox"][disabled] { -webkit-filter: opacity(0.1); }
+
+.gwt-TextBox,
+.gwt-SuggestBox,
+.tvs-CustomListBox,
+.gwt-DateBox,
+.gwt-TextArea {
+	background-color: #16191A;
+	border: 1px solid #353535;
+	border-radius: 6px;
+	padding: 2px;
+	color: white;
+	font-size: 1em;
+	width: 100%;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	outline: 0;
+	padding: 3px 4px;
+}
+
+.gwt-TextBox, .gwt-SuggestBox {padding: 4px;}
+
+.gwt-TextBox[img] {
+	padding-left: 28px;
+	background-size: 14px;
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+.gwt-TextBox[img="search"] {background-image: url('../img/search.png');}
+
+.gwt-TextBox[disabled] {
+    color: white;
+    border-color: transparent;
+    background: none;
+}
+
+.gwt-TextBox:invalid {color: red;}
+.gwt-TextBox[type="time"] {background: white; color: black; padding: 2px;}
+
+.gwt-SuggestBoxPopup {
+	border: 1px solid white;
+	border-radius: 6px;
+	background-color: #1F2324;
+	font-size: 1em;
+	opacity: 0.999;
+	padding: 5px 4px;
+	box-shadow: 0px 0px 20px black;
+}
+
+.gwt-SuggestBoxPopup table {
+	border-collapse: collapse;
+}
+
+.gwt-SuggestBoxPopup .item {
+	color: white;
+	font-size: 1.1em;
+	border: none;
+	border-radius: 2px;
+	padding: 2px 5px;
+    min-width: 150px;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+    background: #0073A2;
+	color: white;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 0 1px #00A2E4;
+}
+
+.gwt-SuggestBoxPopup .item strong {color: #00A2E4;}
+
+/***************************************************/
+/* TVS CUSTOM LIST BOX */
+/***************************************************/
+
+.tvs-CustomListBox select.gwt-ListBox, .tvs-CustomListBox select {
+	overflow: hidden;
+   	background-image: url('../img/listbox_arrow.png');
+   	background-repeat: no-repeat;
+   	background-position: right;
+   	background-size: 18px;
+	color: inherit;
+   	padding: 0;
+	border:none;
+	margin: 0;
+   	background-color: #16191A;
+	-webkit-appearance: none;
+	font-size: inherit;
+	width: 100%;
+	outline: none;
+}
+
+.inner-panel .gwt-CustomListBox {
+	background: transparent;
+	border: 0;
+}
+
+.tvs-CustomListBox option {
+	background: #16191A;
+	color: white;
+}
+
+.tvs-CustomListBox option:hover {
+	color: black;
+    background: -webkit-linear-gradient(top, #00E0FF, #00ABC4);
+    background: -moz-linear-gradient(top, #00E0FF, #00ABC4);
+    background: -ms-linear-gradient(top, #00E0FF, #00ABC4);
+}
+
+.tvs-CustomListBox[disabled] {
+	color: white;
+	border-color: transparent;
+	background: none;
+}
+
+.tvs-CustomListBox[disabled] select {cursor: default; background: none; color: #aaa;}
+
+.tvs-CustomListBox[size] {border-radius: 0;}
+
+
+/***************************************************/
+/* TVS NUMERIC TEXT BOX */
+/***************************************************/
+
+.tvs-NumericTextBox table {text-align: center; width: 100%;}
+
+.tvs-NumericTextBox button,
+.tvs-NumericTextBox button:hover,
+.tvs-NumericTextBox button:active {
+	margin: 0;
+	width: 20px;
+	text-align: center;
+    color: transparent;
+    border: none;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: none;
+    background-color: transparent;
+}
+.tvs-NumericTextBox button.minus {background-image: url('../img/minus_active.png');}
+.tvs-NumericTextBox button.plus {background-image: url('../img/plus_active.png');}
+.tvs-NumericTextBox button.minus:active {background-image: url('../img/minus_active.png');}
+.tvs-NumericTextBox button.plus:active {background-image: url('../img/plus_active.png');}
+
+.tvs-NumericTextBox .gwt-TextBox {text-align: right;}
+.tvs-NumericTextBox .gwt-HTML {margin: 0 3px;}
+
+/***************************************************/
+/* SEARCH PANEL */
+/***************************************************/
+
+.search-panel .gwt-TextBox[state="active"] {border-color: #00A2E4; box-shadow: 0 0 2px #00A2E4;}
+
+/***************************************************/
+/* DATE PICKER */
+/***************************************************/
+
+.gwt-DatePicker {
+	font-size: 1em;
+}
+
+.datePickerPreviousButton,
+.datePickerNextButton {
+	font-size: 1.3em;
+	cursor: pointer;
+	outline: none;
+}
+
+.datePickerWeekdayLabel,
+.datePickerWeekendLabel {
+	border: none !important;
+}
+
+.datePickerDay {
+	padding: 1px 6px !important;
+	border-right: 1px solid #202020 !important;
+	border-bottom: 1px solid #202020 !important;
+	text-align: center;
+	cursor: pointer;
+	font-size: 0.9em;
+	background: -webkit-linear-gradient(top, #484848, #373737) !important;
+}
+
+.datePickerDay:first-child {border-left: 1px solid #202020;}
+.datePickerDays tr:nth-child(2) td {border-top: 1px solid #202020;}
+.datePickerDay.datePickerDayIsWeekend {background: -webkit-linear-gradient(top,#303030,#2a2a2a) !important;}
+.datePickerDay.datePickerDayIsHighlighted {background: -webkit-linear-gradient(top, #585858, #474747) !important; color: white !important;}
+.datePickerDay.datePickerDayIsFiller {color: #161616 !important; background: transparent !important;}
+.datePickerDay.datePickerDayIsToday {background: #8636DF !important; box-shadow:0 0 3px #1B0B2D inset;}
+.datePickerDay.datePickerDayIsValue {background: -webkit-linear-gradient(top, #0073a2, #004c6b) !important; box-shadow:0 0 3px #002533 inset;}
+
+/***************************************************/
+/* TAG CATEGORIES */
+/***************************************************/
+.tag-categories {color: white; font-size: 12px;}
+.tag-categories textArea {width: 100%; font-family: Arial;}
+.tag-categories .dialogbox-content > * {margin-bottom: 5px;}
+
+.tag-categories .tag-cat {
+    display: inline-block;
+    cursor: pointer;
+	width: 18px;
+    height: 18px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background: transparent;
+    padding: 3px;
+    margin: 2px;
+}
+
+.tag-categories .cat-color {width: 100%; height: 100%; border-radius: 12px; background: #282D2E;}
+
+/* Shows a colored circle around the panel at selection */
+.tag-categories .tag-cat[selected][color="red"] {border-color: #D00000;}
+.tag-categories .tag-cat[selected][color="orange"] {border-color: #FFA500;}
+.tag-categories .tag-cat[selected][color="green"] {border-color: #008700;}
+.tag-categories .tag-cat[selected][color="blue"] {border-color: #0C98D1;}
+.tag-categories .tag-cat[selected][color="purple"] {border-color: #8636DF;}
+.tag-categories .tag-cat[selected][color="grey"] {border-color: grey;}
+
+/* background color of inner panels */
+.tag-categories .tag-cat[color="red"] .cat-color {background: #D00000;}
+.tag-categories .tag-cat[color="orange"] .cat-color {background: #FFA500;}
+.tag-categories .tag-cat[color="green"] .cat-color {background: #008700;}
+.tag-categories .tag-cat[color="blue"] .cat-color {background: #0C98D1;}
+.tag-categories .tag-cat[color="purple"] .cat-color {background: #8636DF;}
+.tag-categories .tag-cat[color="grey"] .cat-color {background: grey;}
+
+.tag-categories table {font-size: 12px; color: white; margin: auto; width: 100%;}
+.tag-categories .clip-bounds-panel > * {display:inline-block; margin: 0 4px;}
+.tag-categories .clip-bounds-panel > .gwt-TextBox {width: 100px; text-align: center;}
+
+.tag-categories .category-info {color: grey; font-weight: bold;}
+
+
+

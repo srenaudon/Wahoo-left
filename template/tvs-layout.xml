@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    File version = 1.0.0
+    Start versioning 
+ -->
+ 
+<tns:WebappLayoutConfiguration 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tns="http://webapplayout.tvs.thalesgroup.com"
+    xsi:schemaLocation="http://webapplayout.tvs.thalesgroup.com tvs-webapp-layout.xsd">
+
+	<role id="VS_ADMINISTRATOR">
+		<layout id="default"/>
+		<layout id="1_screen"/>
+		<layout id="1_screen_video"/>
+		<layout id="2_screen_full"/>
+		<layout id="2_screen_novideo"/>
+		<layout id="3_screen"/>
+    <layout id="3_screen_d"/>
+		<layout id="4_screen"/>
+		<layout id="1_screen_histo" />
+	</role>
+    <role id="VS_SUPERVISOR">
+		<layout id="default"/>
+		<layout id="1_screen"/>
+		<layout id="1_screen_video"/>
+		<layout id="2_screen_full"/>
+		<layout id="3_screen"/>
+		<layout id="4_screen"/>
+		<layout id="virtual_screenwall"/>
+		<layout id="1_screen_histo" />
+	</role>
+
+	<role id="VS_OPERATOR">
+		<layout id="1_screen"/>
+		<layout id="2_screen_full"/>
+		<layout id="1_screen_video"/>
+	</role>
+
+	<role id="VS_OPERATOR_MONO">
+		<layout id="1_screen"/>
+		<layout id="1_screen_video"/>
+	</role>
+
+	<role id="supervisor">
+		<layout id="default"/>
+	</role>
+
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="4_screen">
+        <Screen top="50" left="0" width="50" height="50">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="STACK" top="0" left="82" width="18" height="100">
+                    <Widget id="CYCLES_LIST"/>
+                    <Widget id="CYCLES_EDITOR"/>
+                    <Widget id="PRESET_EDITOR"/>
+                </Container>
+                <Container type="TABS" top="72" left="0" width="25" height="28">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+                <Container type="STACK" top="0" left="0" width="15" height="72">
+                    <Widget id="INFOS_PANEL"/>
+                    <Widget id="COMMANDS_PANEL"/>
+                    <Widget id="BUTTONS_PANEL"/>
+                </Container>
+                <Container type="BASIC" top="0" left="15" width="67" height="72">
+                    <Widget id="MAPS"/>
+                </Container>
+                <Container type="TABS" top="72" left="25" width="57" height="28">
+                    <Widget id="CONNECTION_MATRIX"/>
+                    <Widget id="ALARMS_BANNER"/>
+                    <Widget id="CLIPS_LIST"/>
+                    <Widget id="EXPORT_LIST"/>
+                    <Widget id="TrafficEventGrid"/>
+                </Container>
+            </Content>
+        </Screen>
+        <Screen top="0" left="50" width="50" height="50">
+            <Header>
+                <HeaderLeft><Widget id="CLOCK"/></HeaderLeft>
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="SIMPLE" top="0" left="0" width="15" height="100">
+                    <Widget id="NAVIGATION_TREE"/>
+                </Container>
+                <Container type="VIDEO" top="0" left="15" width="85" height="100"/>
+            </Content>
+        </Screen>
+        <Screen top="0" left="0" width="50" height="50">
+            <Header>
+                <HeaderMiddle>
+                    <Widget id="CLOCK"/>
+                </HeaderMiddle>
+            </Header>
+            <Content>
+                <Container type="BASIC" top="0" left="0" width="100" height="100">
+                    <!-- <Widget id="OVERVIEW"/> -->
+                    <Widget id="IFRAME" args="url=https://embed.windyty.com/?25.265%2C54.404"/>
+                </Container>
+            </Content>
+        </Screen>
+        <Screen top="50" left="50" width="50" height="50">
+            <Header>
+                <HeaderMiddle>
+                    <Widget id="CLOCK"/>
+                </HeaderMiddle>
+            </Header>
+            <Content>
+                <Container type="BASIC" top="0" left="0" width="50" height="50">
+                    <Widget id="IFRAME0" args="url=/dashboard/date.html"/>
+                </Container>
+                <Container type="BASIC" top="50" left="0" width="50" height="50">
+                    <Widget id="IFRAME1" args="url=/dashboard/barchart.html"/>
+                </Container>
+                <Container type="BASIC" top="0" left="50" width="50" height="50">
+                    <Widget id="IFRAME2" args="url=/dashboard/gauge.html"/>
+                </Container>
+                <Container type="BASIC" top="50" left="50" width="50" height="50">
+                    <Widget id="IFRAME3" args="url=/dashboard/wheather.html"/>
+                </Container>
+            </Content>
+        </Screen>
+    </Layout>
+    
+
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="3_screen">
+        <Screen top="0" left="0" width="33" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="STACK" top="0" left="82" width="18" height="100">
+                    <Widget id="CYCLES_LIST"/>
+                    <Widget id="CYCLES_EDITOR"/>
+                    <Widget id="PRESET_EDITOR"/>
+                </Container>
+                <Container type="TABS" top="72" left="0" width="25" height="28">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+                <Container type="STACK" top="0" left="0" width="15" height="72">
+                    <Widget id="INFOS_PANEL"/>
+                    <Widget id="COMMANDS_PANEL"/>
+                    <Widget id="BUTTONS_PANEL"/>
+                </Container>
+                <Container type="BASIC" top="0" left="15" width="67" height="72">
+                    <Widget id="MAPS"/>
+                </Container>
+                <Container type="TABS" top="72" left="25" width="57" height="28">
+                    <Widget id="CONNECTION_MATRIX"/>
+                    <Widget id="ALARMS_BANNER"/>
+                    <Widget id="CLIPS_LIST"/>
+                    <Widget id="EXPORT_LIST"/>
+                    <Widget id="TrafficEventGrid"/>
+                </Container>
+            </Content>
+        </Screen>
+        <Screen top="0" left="33" width="33" height="100">
+            <Header>
+                <HeaderLeft><Widget id="CLOCK"/></HeaderLeft>
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="SIMPLE" top="0" left="0" width="15" height="100">
+                    <Widget id="NAVIGATION_TREE"/>
+                </Container>
+                <Container type="VIDEO" top="0" left="15" width="85" height="100"/>
+            </Content>
+        </Screen>
+        <Screen top="0" left="66" width="33" height="100">
+            <Header>
+                <HeaderMiddle>
+                    <Widget id="CLOCK"/>
+                </HeaderMiddle>
+            </Header>
+            <Content>
+                <Container type="BASIC" top="0" left="0" width="100" height="100">
+                    <Widget id="OVERVIEW"/>
+                </Container>
+            </Content>
+        </Screen>
+    </Layout>
+    
+    <Layout id="3_screen_d">
+
+        <Screen top="0" left="00" width="33" height="100">
+            <Header>
+            <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+              
+                
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="BASIC" top="0" left="0" width="100" height="50">
+                    <Widget id="IFRAME1" args="url=/dashboard/dashboard.html"/>
+                </Container>
+				<Container type="VIDEO" top="50" left="0" width="82" height="50"/>
+				<Container type="STACK" top="50" left="82" width="18" height="30">
+                    <Widget id="CYCLES_LIST"/>
+                    <Widget id="CYCLES_EDITOR"/>
+                    <Widget id="PRESET_EDITOR"/>
+					 <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+                 <Container type="TABS" top="80" left="82" width="18" height="50">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+            <!--   <Container type="STACK" top="0" left="0" width="15" height="72">
+                    <Widget id="INFOS_PANEL"/>
+                    <Widget id="COMMANDS_PANEL"/>
+                    <Widget id="BUTTONS_PANEL"/>
+                </Container>-->
+            </Content>
+        </Screen>
+        
+   
+            
+        <Screen top="0" left="33" width="33" height="100">
+            <Header>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+            </Header>
+            <Content>
+
+                <Container type="BASIC" top="0" left="00" width="100" height="72">
+                    <!--<Widget id="IFRAME2" args="url=https://gis.rta.ae/Html5Viewer/Index.html?viewer=mygis"/>-->
+					<Widget id="IFRAME2" args="url=/dashboard/plan.html"/>
+                </Container>
+                <Container type="TABS" top="72" left="0" width="100" height="28">
+                    <Widget id="CONNECTION_MATRIX"/>
+                    <Widget id="ALARMS_BANNER"/>
+                    <Widget id="CLIPS_LIST"/>
+                    <Widget id="EXPORT_LIST"/>
+                    <Widget id="TrafficEventGrid"/>
+                </Container>
+            </Content>
+        </Screen>
+
+		<Screen top="0" left="66" width="33" height="100">
+            <Header>
+                <HeaderLeft><Widget id="CLOCK"/></HeaderLeft>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="BASIC" top="0" left="0" width="100" height="100">
+                    <Widget id="IFRAME0" args="url=/dashboard/SOP.html"/>
+                </Container>
+                
+            </Content>
+        </Screen>
+    </Layout>
+     
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="makkah_live">
+        <Screen top="0" left="0" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="STACK" top="0" left="0" width="25" height="40">
+                    <Widget id="OVERVIEW"/>
+                    <Widget id="NAVIGATION_TREE"/>
+                </Container>
+                <Container type="SIMPLE" top="75" left="0" width="25" height="25">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+	        <Container type="SIMPLE" top="40" left="0" width="25" height="35">
+                    <Widget id="INFOS_PANEL"/>
+                </Container>
+                <Container type="BASIC" top="0" left="25" width="75" height="100">
+                    <Widget id="MAPS"/>
+                </Container>
+            </Content>
+        </Screen>
+        <Screen top="0" left="50" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGO"/></HeaderLeft>
+                <HeaderMiddle><Widget id="CLOCK"/></HeaderMiddle>
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="VIDEO" top="0" left="0" width="100" height="100"/>
+            </Content>
+        </Screen>
+    </Layout>
+    
+
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="default">
+        <Screen top="0" left="0" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="SIMPLE" top="0" left="82" width="18" height="100">
+                    <Widget id="NAVIGATION_TREE"/>
+                </Container>
+                <Container type="SIMPLE" top="72" left="0" width="25" height="28">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+                <Container type="SIMPLE" top="0" left="0" width="15" height="20">
+                    <Widget id="OVERVIEW"/>
+                </Container>
+	        <Container type="SIMPLE" top="20" left="0" width="15" height="52">
+                    <Widget id="INFOS_PANEL"/>
+                </Container>
+                <Container type="BASIC" top="0" left="15" width="67" height="72">
+                    <Widget id="MAPS"/>
+                </Container>
+                <Container type="SIMPLE" top="72" left="25" width="57" height="28">
+                    <Widget id="ALARMS_BANNER"/>
+                </Container>
+            </Content>
+        </Screen>
+        <Screen top="0" left="50" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGO"/></HeaderLeft>
+                <HeaderMiddle><Widget id="CLOCK"/></HeaderMiddle>
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="VIDEO" top="0" left="0" width="100" height="100"/>
+            </Content>
+        </Screen>
+    </Layout>
+    
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="2_screen_full">
+        <Screen top="0" left="0" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/><Widget id="WEBAPP_VERSION"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="TABS" top="0" left="82" width="18" height="50">
+                    <Widget id="NAVIGATION_TREE"/>
+                    <Widget id="FAVORITES"/>
+                </Container>
+                <Container type="STACK" top="50" left="82" width="18" height="50">
+                    <Widget id="CYCLES_LIST"/>
+                    <Widget id="CYCLES_EDITOR"/>
+                    <Widget id="PRESET_EDITOR"/>
+                    <Widget id="JOYSTICK"/>
+                </Container>
+                <Container type="SIMPLE" top="72" left="0" width="25" height="28">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+                <Container type="SIMPLE" top="0" left="0" width="15" height="20">
+                    <Widget id="OVERVIEW"/>
+                </Container>
+                <Container type="SIMPLE" top="20" left="0" width="15" height="52">
+                    <Widget id="INFOS_PANEL"/>
+                </Container>
+                <Container type="BASIC" top="0" left="15" width="67" height="72">
+                    <Widget id="MAPS"/>
+                </Container>
+                <Container type="TABS" top="72" left="25" width="57" height="28">
+                    <Widget id="CONNECTION_MATRIX"/>
+                    <Widget id="ALARMS_BANNER"/>
+                    <Widget id="CLIPS_LIST"/>
+                    <Widget id="EXPORT_LIST"/>
+                    <Widget id="EXPLORER" />
+                    <Widget id="TrafficEventGrid"/>
+                </Container>
+            </Content>
+        </Screen>
+        <Screen top="0" left="50" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="CLOCK"/></HeaderLeft>
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="VIDEO" top="0" left="0" width="100" height="100"/>
+            </Content>
+        </Screen>
+    </Layout>
+    
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="2_screen_novideo">
+        <Screen top="0" left="0" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="STACK" top="0" left="82" width="18" height="50">
+                    <Widget id="NAVIGATION_TREE"/>
+                    <Widget id="CYCLES_LIST"/>
+                </Container>
+                <Container type="STACK" top="50" left="82" width="18" height="50">
+                    <Widget id="CYCLES_EDITOR"/>
+                    <Widget id="PRESET_EDITOR"/>
+                </Container>
+                <Container type="SIMPLE" top="72" left="0" width="25" height="28">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+                <Container type="SIMPLE" top="20" left="0" width="15" height="52">
+                    <Widget id="INFOS_PANEL"/>
+                </Container>
+                <Container type="BASIC" top="0" left="15" width="67" height="72">
+                    <Widget id="MAPS"/>
+                </Container>
+                <Container type="TABS" top="72" left="25" width="57" height="28">
+                    <Widget id="CONNECTION_MATRIX"/>
+                    <Widget id="ALARMS_BANNER"/>
+                    <Widget id="CLIPS_LIST"/>
+                    <Widget id="EXPORT_LIST"/>
+                    <Widget id="TrafficEventGrid"/>
+                </Container>
+            </Content>
+        </Screen>
+        <Screen top="0" left="50" width="50" height="100">
+            <Header>
+                <HeaderLeft><Widget id="CLOCK"/></HeaderLeft>
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="SIMPLE" top="0" left="0" width="100" height="100">
+                    <Widget id="OVERVIEW"/>
+                </Container>
+            </Content>
+        </Screen>
+    </Layout>
+    
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="1_screen">
+        <Screen top="0" left="0" width="100" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="STACK" top="0" left="82" width="18" height="50">
+                    <Widget id="NAVIGATION_TREE"/>
+                    <Widget id="CYCLES_LIST"/>
+                </Container>
+                <Container type="STACK" top="50" left="82" width="18" height="50">
+                    <Widget id="CYCLES_EDITOR"/>
+                    <Widget id="PRESET_EDITOR"/>
+                </Container>
+                <Container type="SIMPLE" top="72" left="0" width="25" height="28">
+                    <Widget id="EXTERNAL_SCREENWALL" />
+                </Container>
+                <Container type="SIMPLE" top="0" left="0" width="15" height="20">
+                    <Widget id="OVERVIEW"/>
+                </Container>
+                <Container type="STACK" top="20" left="0" width="15" height="52">
+                    <Widget id="INFOS_PANEL"/>
+                </Container>
+                <Container type="BASIC" top="0" left="15" width="67" height="72">
+                    <Widget id="MAPS"/>
+                </Container>
+                <Container type="TABS" top="72" left="25" width="57" height="28">
+                    <Widget id="CONNECTION_MATRIX"/>
+                    <Widget id="ALARMS_BANNER"/>
+                    <Widget id="CLIPS_LIST"/>
+                    <Widget id="EXPORT_LIST"/>
+                    <Widget id="TrafficEventGrid"/>
+                </Container>
+            </Content>
+        </Screen>
+    </Layout>
+    
+    
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="1_screen_video">
+        <Screen top="0" left="0" width="100" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="VIDEO_LAYOUT_SELECTOR"/><Widget id="JOYSTICK_BTN"/><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="STACK" top="25" left="0" width="25" height="75">
+                    <Widget id="NAVIGATION_TREE"/>
+                    <Widget id="CYCLES_LIST"/>
+                    <Widget id="CYCLES_EDITOR"/>
+                    <Widget id="PRESET_EDITOR"/>
+                    <Widget id="JOYSTICK"/>
+                </Container>
+                <Container type="SIMPLE" top="0" left="0" width="25" height="25">
+                	<Widget id="EXTERNAL_SCREENWALL"/>
+                </Container>
+                <Container type="VIDEO" top="0" left="25" width="75" height="100"/>
+            </Content>
+        </Screen>
+    </Layout>
+    
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="virtual_screenwall">
+        <Screen top="0" left="0" width="100" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="VIDEO" top="0" left="0" width="100" height="100"/>
+            </Content>
+        </Screen>
+    </Layout>
+    
+        <!-- //////////////////////////////////////////////////////////////////// -->
+    
+    <Layout id="1_screen_histo">
+        <Screen top="0" left="0" width="100" height="100">
+            <Header>
+                <HeaderLeft><Widget id="LOGOUT_BTN"/><Widget id="OPERATOR_ID"/><Widget id="LAYOUT_SELECTOR"/></HeaderLeft>
+                <HeaderMiddle><Widget id="LOGO"/></HeaderMiddle>
+                <HeaderRight><Widget id="WEBSERVER_STATUS"/></HeaderRight>
+            </Header>
+            <Content>
+                <Container type="SIMPLE" top="0" left="0" width="100" height="100">
+                    <Widget id="HISTORIZATION" />
+                </Container>
+            </Content>
+        </Screen>
+    </Layout>
+	
+</tns:WebappLayoutConfiguration>

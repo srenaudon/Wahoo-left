@@ -1,0 +1,134 @@
+
+.mwt-dmm {
+    cursor:pointer;
+}
+
+.mwt-dmm .mwt-dmm-panel {
+	background-color: #2F4F4F;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	-khtml-border-radius: 9px;
+	border-radius: 9px;
+	border: #2F4F4F solid 3px;
+	transition-property: border;
+	transition-duration: 0.7s;
+}
+
+.mwt-dmm .mwt-dmm-panel:hover {
+	border: #018596 solid 3px;
+	transition-property: border;
+	transition-duration: 0.7s;
+}
+
+.mwt-dmm .mwt-dmm-panel:active {
+	background-color: #0F2F2F;
+}
+
+.mwt-dmm-panel .mwt-dmm-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: auto;
+}
+
+.mwt-dmm-panel .mwt-dmm-label {
+	text-align:center;
+	font-size:12px;
+}
+
+
+/***************************************************/
+/* VIEW */
+/***************************************************/
+
+.screenwall .waiting-panel {
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    color: white;
+
+}
+
+
+/***************************************************/
+/* VIEW */
+/***************************************************/
+
+.screenwall-widget {font-size: 3.2em;}
+
+/***************************************************/
+/* SCREENWALL */
+/***************************************************/
+
+.screenwall {position: absolute;border: 1px solid transparent;box-sizing: border-box;}
+
+/***************************************************/
+/* LAYOUTS */
+/***************************************************/
+
+.pane-layout {position: absolute; overflow:hidden;}
+
+/***************************************************/
+/* PANES */
+/***************************************************/
+
+.pane {
+	position: absolute;
+	background-color: #16191A;
+	border: 1px solid #373737;
+	box-sizing: border-box;
+	cursor: pointer;
+	text-align: center;
+	background-size: auto 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+}
+
+.pane[hasRight="false"] {opacity: 0.3; cursor: default;}
+
+
+.pane[hasRight="true"]:hover {background-color: #2A2A2A;box-shadow:inset 0 0 4px #161616;}
+.pane[hasRight="false"]:hover {}
+
+
+.pane[hasText="false"] {background-position-y: center;}
+.pane[hasText="true"] {background-position-y: 70%;}
+
+.pane-label {
+	position: absolute;
+    width: 90%;
+    top: 8%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	overflow: hidden;
+	margin: 0 5%;
+}
+
+/***************************************************/
+/* GRID COLORS : Add class name 'colored' */
+/***************************************************/
+
+.screenwall.colored {background: #2A2A2A;}
+.screenwall.colored .pane {border-color: #2A2A2A;}
+.screenwall.colored .pane-layout:nth-child(1n) .pane {background-color: rgba(0,100,200,0.7);}
+.screenwall.colored .pane-layout:nth-child(2n) .pane {background-color: rgba(0,140,200,0.7);}
+.screenwall.colored .pane-layout:nth-child(3n) .pane {background-color: rgba(90,54,223,0.7);}
+.screenwall.colored .pane-layout:nth-child(4n) .pane {background-color: rgba(160,54,223,0.7);}
+.screenwall.colored .pane-layout:nth-child(1n) .pane[hasRight="true"]:hover {background-color: rgba(0,100,200,0.9);}
+.screenwall.colored .pane-layout:nth-child(2n) .pane[hasRight="true"]:hover {background-color: rgba(0,140,200,0.9);}
+.screenwall.colored .pane-layout:nth-child(3n) .pane[hasRight="true"]:hover {background-color: rgba(90,54,223,0.9);}
+.screenwall.colored .pane-layout:nth-child(4n) .pane[hasRight="true"]:hover {background-color: rgba(160,54,223,0.9);}
+.screenwall.colored .pane[hasRight="true"]:hover {box-shadow:none;}
+
+/***************************************************/
+/* GRID BORDER : Add class name 'bordered' */
+/***************************************************/
+
+.screenwall.bordered {border: 1px solid #707070;}
+.screenwall.bordered .pane-layout {border: 1px solid #707070; box-sizing:border-box;}
+
+

@@ -1,0 +1,112 @@
+
+
+/***************************************************/
+/* TVS DIALOG BOX */
+/***************************************************/
+
+/* Needed for Chrome 27 : Instead it shows scrollbars at first frame opening */
+#wrapper-panel {overflow: hidden;}
+
+.dialogbox-background {
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    left: 0;
+    right: 0; 
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8); 
+    text-align: center;
+}
+
+.dialogbox-main {
+    border: 2px solid white;
+	border-radius: 8px;
+	background: rgba(0,0,0,0.8);
+	padding: 10px;
+	margin: 30px;
+}
+
+.dialogbox-content {}
+
+.dialogbox-buttonbar {margin-top: 10px;}
+.dialogbox-buttonbar button {width: 90px; padding: 4px; max-width: 100px;}
+.dialogbox-buttonbar button:hover {color: white; }
+
+/***************************************************/
+/* TVS DIALOG FRAME */
+/***************************************************/
+
+#tvs-dialog-container {position: absolute; z-index: 2;}
+
+.iframedialogbox {
+    border: 2px solid white;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12;
+    color: white;
+    box-sizing: border-box;
+}
+
+/***************************************************/
+/* PLUGIN MSG FRAME */
+/***************************************************/
+
+.plugin-msg-frame {
+	margin: 50px auto;
+	border-radius: 8px;
+}
+
+.plugin-msg-frame a {
+	padding: 0 5px;
+	color: #00A2E4;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/***************************************************/
+/* CAMERA CONTROL MSG FRAME */
+/***************************************************/
+
+.camera-control-msg-frame {
+    margin: 50px auto;
+    border-radius: 8px;
+}
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/* OTHER (NO MORE USED ?) */
+
+/*
+.dialogbox .message a {color: #A0A0FF;}
+
+.fullscreendialogbox {
+    border: 2px solid white;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    font-family: Arial;
+    font-size: 12;
+    color: white;
+    margin: 30px;
+}
+
+.infoDialog-glass {opacity: 0.8;}
+
+.infoDialog-panel {
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.8);
+    font-size: 1em;
+    opacity: 0.999;
+    padding: 5px;
+}
+
+.infoDialog-panel-disconnected {color: #FFA500; border-color: #FFA500;}
+.infoDialog-panel .header-label {color: white; background: none;}
+.infoDialog-panel-disconnected .header-label {color: #FFA500;}
+.infoDialog-panel-disconnected .message {color: #FFA500;}
+*/
