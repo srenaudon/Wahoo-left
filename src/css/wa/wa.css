@@ -54,3 +54,12 @@ body{
     margin-right: auto;
     margin-left: auto;
 }
+
+/* KPI bus occupancy */
+.wa-kpi-bus-occupancy{
+    padding-top:70px;
+    padding-left:auto;
+    padding-right:auto;
+    width:600px;
+    height:100px;
+}

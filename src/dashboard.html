@@ -17,6 +17,7 @@
     <script src="./js/kpi-operators-load-factor.js"></script>
     <script src="js/kpi-alert-event-backlog.js"></script>
     <script src="js/kpi-active-taxi.js"></script>
+    <script src="js/kpi-bus-occupancy.js"></script>
 
     <!-- libs  styles -->
     <link href="./lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css">
@@ -81,63 +82,14 @@
         <li  data-row="2" data-col="3" data-sizex="1" data-sizey="1">
             <div class="wa-grid-cell">
                 <div class="wa-kpi-title">
-                    <h3 >Bus occupancy</h3>
+                    <h3 >Current Bus occupancy (line 3)</h3>
                 </div>
-            <div class="wa-kpi" id="bus-occupancy" style="padding-top:150px;width:450px;height:50px"></div>
+            <div class="wa-kpi wa-kpi-bus-occupancy" id="wa-kpi-bus-occupancy"></div>
             </div>
         </li>
 
     </ul>
 </div>
 
-<script>
-
-
-    $(function () {
-
-
-    /* Bus line occupancy */
-    $("#bus-occupancy").kendoChart({
-        legend: {
-            visible: false
-        },
-        series: [{
-            type: "bullet",
-            data: [[1450, 1300]]
-        }],
-        categoryAxis: {
-            majorGridLines: {
-                visible: false
-            },
-            majorTicks: {
-                visible: false
-            }
-        },
-        valueAxis: [{
-            plotBands: [{
-                from: 0, to: 500, color: "yellow", opacity: .3
-            }, {
-                from: 500, to: 1500, color: "orange", opacity: .3
-            }, {
-                from: 1500, to: 2000, color: "red", opacity: .3
-            }],
-            majorGridLines: {
-                visible: false
-            },
-            min: 0,
-            max: 2000,
-            minorTicks: {
-                visible: false
-            }
-        }],
-        tooltip: {
-            visible: true,
-            template: "Maximum: #= value.target # <br /> Average: #= value.current #"
-        }
-    });
-    });
-
-
-</script>
 </body>
 </html>
