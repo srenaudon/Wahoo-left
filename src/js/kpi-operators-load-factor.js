@@ -78,7 +78,7 @@
                         alertKPI('wa-kpi-operators-load-factor', false, intervalID);
                     }
 
-                }, (waEC3.config.kpi.animationStep * 10));//change every min
+                }, (waEC3.config.kpi.animationStep * 60));//change every min
 
             }
             clos(data, scenario);
