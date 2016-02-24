@@ -15,6 +15,17 @@
                 },
 
                 scale: {
+                    labels: {
+                        color: waEC3.config.style.color
+                    },
+                    majorTicks:{
+                        color: waEC3.config.style.color
+
+                    },
+                    minorTicks:{
+                        color: waEC3.config.style.color
+
+                    },
                     minorUnit: 5,
                     startAngle: -20,
                     endAngle: 200,
