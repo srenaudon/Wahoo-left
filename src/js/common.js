@@ -6,7 +6,8 @@ window.waEC3.config = {
         colorOK: '#a0a700',//green flag color,
         colorOKAlt: 'DarkGreen',//alternative green flag color,
         colorWatch: '#ff7a00',//orange flag color
-        colorNOK: '#c20000'//red flag color
+        colorNOK: '#c20000',//red flag color
+        colorInProgress: 'DarkGoldenRod'//in progress
 
     },
     layout: { //layout settings

@@ -15,6 +15,7 @@
     <script src="./js/kpi-activity.js"></script>
     <script src="./js/kpi-average-speed.js"></script>
     <script src="./js/kpi-operators-load-factor.js"></script>
+    <script src="js/kpi-alert-event-backlog.js"></script>
 
     <!-- libs  styles -->
     <link href="./lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css">
@@ -65,7 +66,7 @@
                 <div class="wa-kpi-title">
                     <h3 >Alarms and events backlog</h3>
                 </div>
-            <div class="wa-kpi" id="backlog"></div>
+            <div class="wa-kpi" id="wa-kpi-alert-event-backlog"></div>
             </div>
         </li>
         <li  data-row="2" data-col="2" data-sizex="1" data-sizey="1">
@@ -95,76 +96,6 @@
 
 
 
-
-
-        /* Backlog  */
-        $("#backlog").kendoChart({
-            title: {
-                text: "Alarms and Events backlog"
-            },
-            legend: {
-                visible: true
-            },
-            seriesDefaults: {
-                type: "column",
-                stack: {
-                    type: "100%"
-                }
-            },
-            series: [{
-                name: "pending",
-                stack: {
-                    group: "alarm"
-                },
-                data: [140]
-            }, {
-                name: "read",
-                stack: {
-                    group: "alarm"
-                },
-                data: [65]
-            }, {
-                name: "pending",
-                stack: {
-                    group: "event"
-                },
-                data: [67]
-            }, {
-                name: "red",
-                stack: {
-                    group: "event"
-                },
-                data: [50]
-            }, {
-                name: "in progress",
-                stack: {
-                    group: "event"
-                },
-                data: [37]
-            }, {
-                name: "solved",
-                stack: {
-                    group: "event"
-                },
-                data: [20]
-            }],
-            seriesColors: ["#cd1533", "#d43851",
-                "#cd1533", "#d43851","#73c8e9", "green"],
-            valueAxis: {
-                line: {
-                    visible: false
-                }
-            },
-            categoryAxis: {
-                line: {
-                    visible: false
-                }
-            },
-            tooltip: {
-                visible: true,
-                template: "#= series.stack.group #s, age #= series.name #"
-            }
-        });
 
         /* Taxi trip KPI */
         function createTaxiTrip() {
