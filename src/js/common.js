@@ -2,7 +2,12 @@
 window.waEC3 = {};
 window.waEC3.config = {
     style: {
-        color: '#fff'//characters color
+        color: '#fff',//characters color
+        colorOK: '#a0a700',//green flag color,
+        colorOKAlt: 'DarkGreen',//alternative green flag color,
+        colorWatch: '#ff7a00',//orange flag color
+        colorNOK: '#c20000'//red flag color
+
     },
     layout: { //layout settings
         screenWidth: 620, // available screen width for dashboard (px)

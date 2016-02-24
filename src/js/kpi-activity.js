@@ -1,9 +1,7 @@
+/* Activity KPI */
 (function () {
-    $(function () {0
-        /* Activity KPI */
+    $(function () {
         var kpiAnchor = 'wa-kpi-activity';
-
-
         var data = new kendo.data.ObservableArray(dataScenario[0]);
 
         function createKPI(anchor) {
@@ -49,7 +47,7 @@
                     plotBands: [{
                         from: 25,
                         to: 50,
-                        color: '#c00',
+                        color: waEC3.config.style.colorNOK,
                         opacity: 0.3
                     }]
                     ,
@@ -77,7 +75,7 @@
             });
         }
 
-        function animateKPI(data){
+        function animateKPI(anchor,data){
 
             var count=0;
             setInterval(function(){
@@ -97,7 +95,7 @@
         }
 
         createKPI(kpiAnchor);
-        animateKPI(data);
+        animateKPI(kpiAnchor,data);
 
     });
 

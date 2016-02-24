@@ -14,7 +14,7 @@
     <script src="./js/layout.js"></script>
     <script src="./js/kpi-activity.js"></script>
     <script src="./js/kpi-average-speed.js"></script>
-
+    <script src="./js/kpi-operators-load-factor.js"></script>
 
     <!-- libs  styles -->
     <link href="./lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css">
@@ -28,17 +28,6 @@
 </head>
 
 
-<style>
-
-    /* Team load factor */
-    .k-chart.small-chart {
-        display: block;
-        width: 200px;
-        height: 200px;
-        float:left;
-    }
-
-</style>
 <body>
 <div class="wa-grid gridster">
     <ul>
@@ -63,10 +52,10 @@
                 <div class="wa-kpi-title">
                     <h3 >Operators load factor</h3>
                 </div>
-            <div class="wa-kpi">
-                <div id="chart-supervisor" class="small-chart"></div>
-                <div id="chart-liaison-officer" class="small-chart"></div>
-                <div id="chart-call-taker" class="small-chart"></div>
+            <div class="wa-kpi" id="wa-kpi-operators-load-factor">
+                <div id="wa-kpi-supervisor-load-factor" class="wa-kpi-operators-load-factor"></div>
+                <div id="wa-kpi-liaison-officer-load-factor" class="wa-kpi-operators-load-factor"></div>
+                <div id="wa-kpi-call-taker-load-factor" class="wa-kpi-operators-load-factor"></div>
 
             </div>
             </div>
@@ -106,80 +95,6 @@
 
 
 
-
-
-        /* Team load factor */
-        function createSmallPie(id, data,title) {
-            $("#" + id).kendoChart({
-
-                dataSource: {
-                    data: data
-                },
-                title: {
-                    text: title
-                },
-                /*legend: {
-                    position: "top"
-                },*/
-                seriesDefaults: {
-                    type: "pie"
-                },
-
-                series: [{
-                    type: "pie",
-                    field: "percentage",
-                    categoryField: "source",
-                    explodeField: "explode"
-                }],
-                tooltip: {
-                    visible: true,
-                    format: "N0",
-                    template: "#= category # - #= kendo.format('{0:P}', percentage)#"
-                }
-            });
-        }
-
-        var dataSupervisor = [
-            {
-                "source": "free",
-                "percentage": 22,
-                "explode": true
-            },
-            {
-                "source": "occupied",
-                "percentage": 78
-            }
-        ];
-        var dataCaller = [
-            {
-                "source": "free",
-                "percentage": 10,
-                "explode": true
-            },
-            {
-                "source": "occupied",
-                "percentage": 90
-            }
-        ];
-        var dataLiaison = [
-            {
-                "source": "free",
-                "percentage": 30,
-                "explode": true
-            },
-            {
-                "source": "occupied",
-                "percentage": 70
-            }
-        ];
-
-
-        function createPie() {
-            createSmallPie("chart-supervisor",dataSupervisor,"Supervisor");
-            createSmallPie("chart-liaison-officer",dataLiaison,"Liaison Officer");
-            createSmallPie("chart-call-taker",dataCaller,"Data Caller");
-        }
-        createPie();
 
 
         /* Backlog  */

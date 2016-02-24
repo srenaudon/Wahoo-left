@@ -1,8 +1,8 @@
+/* Average speed KPI */
 (function () {
-    $(function () {0
-        /* Activity KPI */
-        var kpiAnchor = 'wa-kpi-average-speed';
+    $(function () {
 
+        var kpiAnchor = 'wa-kpi-average-speed';
 
         var data = new kendo.data.ObservableArray(dataScenario[0]);
 
@@ -20,14 +20,18 @@
                     endAngle: 200,
                     max: 160,
                     ranges: [{
+                        from: 0,
+                        to: 100,
+                        color: waEC3.config.style.colorOK
+                    },{
                         from: 100,
                         to: 120,
-                        color: '#ff7a00'
+                        color: waEC3.config.style.colorWatch
                     },
                         {
                             from: 120,
                             to: 160,
-                            color: '#c20000'
+                            color: waEC3.config.style.colorNOK
                         }],
 
                     labels: {
@@ -43,7 +47,7 @@
         }
 
         function animateKPI(anchor,data){
-
+            var intervalID;
             var count=0;
             setInterval(function(){
                 count++;
