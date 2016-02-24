@@ -92,7 +92,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('to-test-css-ec3', ['clean:cleanWorkCSS','clean:cleanTestCSSEC3','cssmin:ec3','concat:ec3']);
     grunt.registerTask('to-test-src', ['copy:srcMinimal',"copy:cssMinimal"]);
-    grunt.registerTask('to-test-all', ['clean:cleanTest','copy:libToTest','copy:srcMinimal',"to-test-css-ec3"]);
+    grunt.registerTask('to-test-all', ['clean:cleanTest','copy:libToTest','to-test-src',"to-test-css-ec3"]);
 
     /** plugin load*/
     grunt.loadNpmTasks('grunt-contrib-copy');
