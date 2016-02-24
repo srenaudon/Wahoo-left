@@ -16,6 +16,7 @@
     <script src="./js/kpi-average-speed.js"></script>
     <script src="./js/kpi-operators-load-factor.js"></script>
     <script src="js/kpi-alert-event-backlog.js"></script>
+    <script src="js/kpi-active-taxi.js"></script>
 
     <!-- libs  styles -->
     <link href="./lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css">
@@ -72,9 +73,9 @@
         <li  data-row="2" data-col="2" data-sizex="1" data-sizey="1">
             <div class="wa-grid-cell">
                 <div class="wa-kpi-title">
-                    <h3 >Active Taxis</h3>
+                    <h3 >Active Taxis on day</h3>
                 </div>
-            <div class="wa-kpi" id="taxi-trips"></div>
+            <div class="wa-kpi" id="wa-kpi-active-taxi"></div>
             </div>
         </li>
         <li  data-row="2" data-col="3" data-sizex="1" data-sizey="1">
@@ -94,64 +95,6 @@
 
     $(function () {
 
-
-
-
-        /* Taxi trip KPI */
-        function createTaxiTrip() {
-            $("#taxi-trips").kendoChart({
-                title: {
-                    text: "Activity since last hour"
-                },
-                legend: {
-                    position: "bottom",
-                    labels: {
-                        color: '#fff'
-                    }
-
-                },
-                chartArea: {
-                    background: ""
-                },
-                seriesDefaults: {
-                    type: "line",
-                    style: "smooth"
-                },
-                series: [{
-                    name: "taxi trip",
-                    data: [700,800,2000,2200,2300,2180,1900,1800,1649,1300,1240,1319,1450,1800,1900,2000,2300,2000,1900,1300,1100,800]
-                }],
-                valueAxis: {
-                    labels: {
-                        format: "{0}",
-                        color: '#fff'
-                    },
-                    line: {
-                        visible: false
-                    },
-                    axisCrossingValue: 0
-                },
-                categoryAxis: {
-                    categories: [0, 4, 8, 12, 16, 20, 24],
-                    majorGridLines: {
-                        visible: false
-                    },
-                    labels: {
-                        rotation: "auto",
-                        color: '#fff'
-                    }
-                },
-                tooltip: {
-                    visible: true,
-                    format: "{0}",
-                    template: "#= series.name #: #= value #"
-                }
-
-            });
-        }
-
-        createTaxiTrip();
-    });
 
     /* Bus line occupancy */
     $("#bus-occupancy").kendoChart({
@@ -192,7 +135,7 @@
             template: "Maximum: #= value.target # <br /> Average: #= value.current #"
         }
     });
-
+    });
 
 
 </script>
