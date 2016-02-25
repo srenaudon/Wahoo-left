@@ -67,3 +67,11 @@ with on for the dashboard */
     width:600px;
     height:100px;
 }
+
+/* KPI Backlog */
+#wa-kpi-alert-event-backlog{
+    width: 620px;
+    height: 200px;
+    margin-left: auto;
+    margin-right:auto ;
+}
