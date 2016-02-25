@@ -104,7 +104,8 @@
         }
 
         createKPI(kpiAnchor);
-        animateKPI(kpiAnchor,data);
+        //Do not animate
+        //animateKPI(kpiAnchor,data);
 
     });
 
