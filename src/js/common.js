@@ -22,9 +22,9 @@ window.waEC3.config = {
 
     },
     layout: { //layout settings
-        screenWidth: 620, // available screen width for dashboard (px)
-        screenHeight: 280,// available screen height for dashboard (px)
-        margin: 10,// margin between kpi (px)
+        cellWidth: 620, // available screen width for dashboard cell (px)
+        cellHeight: 268,// available screen height for dashboard cell(px)
+        cellMargin: 10,// margin between kpi (px)
         hoverZoomFactor: 1.05,//kpi zoom emphasis on hover
     },
     kpi: {

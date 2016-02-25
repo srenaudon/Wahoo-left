@@ -2,10 +2,14 @@
 body{
     margin:0px;
 }
-/* layout grid */
+/* layout grid
+screen resolution is 1920x1200
+the header is 46px height
+the rest of the screen is divided in two equals areas
+with on for the dashboard */
 .wa-grid {
     width: 1920px;
-    height: 600px;
+    height: 577px;
     overflow: hidden;
 }
 .gridster .gs-w {
@@ -30,7 +34,7 @@ body{
 
 .wa-kpi {
     width: 620px;
-    height: 240px;
+    height: 228px;
     margin-left: auto;
     margin-right:auto ;
 }

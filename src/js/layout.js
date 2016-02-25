@@ -12,8 +12,8 @@
 
         //layout init
         var gridster = $(".wa-grid ul").gridster({
-            widget_base_dimensions: [waEC3.config.layout.screenWidth, waEC3.config.layout.screenHeight],
-            widget_margins: [waEC3.config.layout.margin, waEC3.config.layout.margin],
+            widget_base_dimensions: [waEC3.config.layout.cellWidth, waEC3.config.layout.cellHeight],
+            widget_margins: [waEC3.config.layout.cellMargin, waEC3.config.layout.cellMargin],
             extra_rows: 0,
             extra_rows: 0,
             extra_cols: 0,
