@@ -114,7 +114,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 70,
                 color: waEC3.config.style.colorWatch
             }
@@ -127,7 +127,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 80,
                 color: waEC3.config.style.colorNOK
             }],
@@ -139,7 +139,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 50,
                 color: waEC3.config.style.colorOK
             }
@@ -155,7 +155,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 60,
                 color: waEC3.config.style.colorOK
             }
@@ -168,7 +168,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 90,
                 color: waEC3.config.style.colorNOK
             }],
@@ -180,7 +180,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 30,
                 color: waEC3.config.style.colorOK
             }
@@ -197,7 +197,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 60,
                 color: waEC3.config.style.colorOK
             }
@@ -210,7 +210,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 90,
                 color: waEC3.config.style.colorNOK
             }],
@@ -222,7 +222,7 @@
 
         },
             {
-                "source": "occupied",
+                "source": "busy",
                 "percentage": 20,
                 color: waEC3.config.style.colorOK
             }
