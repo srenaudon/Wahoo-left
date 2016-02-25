@@ -38,20 +38,20 @@
                     minorUnit: 5,
                     startAngle: -20,
                     endAngle: 200,
-                    max: 160,
+                    max: 60,
                     ranges: [{
                         from: 0,
-                        to: 100,
-                        color: waEC3.config.style.colorOK
+                        to: 20,
+                        color: waEC3.config.style.colorNOK
                     },{
-                        from: 100,
-                        to: 120,
+                        from: 20,
+                        to: 40,
                         color: waEC3.config.style.colorWatch
                     },
                         {
-                            from: 120,
-                            to: 160,
-                            color: waEC3.config.style.colorNOK
+                            from: 40,
+                            to: 60,
+                            color: waEC3.config.style.colorOK
                         }],
 
                     labels: {
@@ -74,7 +74,7 @@
                 if(count>8){
                     count=0;
                 }
-                if(dataScenario[count][0] >= 120){
+                if(dataScenario[count][0] <= 20){
                     intervalID = alertKPI(anchor,true);
                 }else{
                     alertKPI(anchor,false,intervalID);
@@ -93,7 +93,7 @@
 
 /* data for demo scenario */
 
-    var dataScenario = [[100],[120],[100],[90],[80],[70],[80],[90],[95]];
+    var dataScenario = [[30],[20],[40],[50],[45],[35],[20],[15],[30]];
 
 })();
 
