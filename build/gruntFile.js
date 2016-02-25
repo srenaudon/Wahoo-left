@@ -6,25 +6,18 @@ module.exports = function (grunt) {
 
 
         global: {
-            /* release version common to all js projects */
-            versionForce :"0.13.0-SNAPSHOT.0" ,
             /* project directory structure */
             dir: {
-                /** base directory of project (absolute path) **/
                 base: path.resolve(path.resolve()+"/.."),
-                /** working directory */
                 working: '<%= global.dir.base %>/working',
-                /** css working directory */
                 workCSS: '<%= global.dir.working %>/css',
-                /** main  path */
                 src: '<%= global.dir.base %>/src',
-                /** build scripts  path */
                 build: '<%= global.dir.base %>/build',
-                /** dist directory */
+                templ: '<%= global.dir.base %>/template',
                 dist: '<%= global.dir.base %>/dist',
-                /**  lib dependencies path */
+                distDash: '<%= global.dir.dist %>/dashboard',
+                distTempl: '<%= global.dir.dist %>/template',
                 lib: '<%= global.dir.src %>/lib',
-               /** compile working directory */
                 test: '<%= global.dir.working %>/test',
 
             }
@@ -34,14 +27,18 @@ module.exports = function (grunt) {
                 force: true
             },
 
-            /**** clean registration  ****/
             cleanTest: ["<%= global.dir.test %>"],
-            /**** clean dist  ****/
             cleanDist: ["<%= global.dir.dist %>"],
-            /**** clean dist  ****/
             cleanWorkCSS: ["<%= global.dir.workCSS %>"],
-            /**** clean dist  ****/
             cleanTestCSSEC3: ["<%= global.dir.test %>/css/ec3"],
+            cleanDistLibs: ["<%= global.dir.distDash %>/lib/kendoui/**/*.*,",
+                "<%= global.dir.distDash %>/lib/kendoui/js/*",
+                "!<%= global.dir.distDash %>/lib/kendoui/js/kendo.all.min.js",
+                "<%= global.dir.distDash %>/lib/kendoui/styles/*",
+                "!<%= global.dir.distDash %>/lib/kendoui/styles/kendo.common.min.css",
+                "!<%= global.dir.distDash %>/lib/kendoui/styles/kendo.metroblack.min.css",
+                "!<%= global.dir.distDash %>/lib/kendoui/styles/MetroBlack",
+                "!<%= global.dir.distDash %>/lib/kendoui/styles/textures"],
 
          },
         copy: {
@@ -68,7 +65,23 @@ module.exports = function (grunt) {
                     src: ['lib/**/*.*'],
                     dest: '<%= global.dir.test %>'
                 }]
-            }
+            },
+            toDistDash: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= global.dir.test %>',
+                    src: ['**/*.*'],
+                    dest: '<%= global.dir.distDash %>'
+                }]
+            },
+            toDistTempl: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= global.dir.templ %>',
+                    src: ['**/*.*'],
+                    dest: '<%= global.dir.distTempl %>'
+                }]
+            },
         },
         cssmin: {
             ec3: {
@@ -93,6 +106,8 @@ module.exports = function (grunt) {
     grunt.registerTask('to-test-css-ec3', ['clean:cleanWorkCSS','clean:cleanTestCSSEC3','cssmin:ec3','concat:ec3']);
     grunt.registerTask('to-test-src', ['copy:srcMinimal',"copy:cssMinimal"]);
     grunt.registerTask('to-test-all', ['clean:cleanTest','copy:libToTest','to-test-src',"to-test-css-ec3"]);
+    grunt.registerTask('to-dist', ['clean:cleanDist','to-test-all','copy:toDistDash','clean:cleanDistLibs','copy:toDistTempl']);
+
 
     /** plugin load*/
     grunt.loadNpmTasks('grunt-contrib-copy');
