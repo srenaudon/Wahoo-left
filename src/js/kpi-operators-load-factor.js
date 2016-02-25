@@ -57,9 +57,9 @@
             }
 
 
-            createSmallPie("wa-kpi-supervisor-load-factor", dataSupervisor, "Supervisor");
-            createSmallPie("wa-kpi-liaison-officer-load-factor", dataLiaison, "Liaison Officer");
-            createSmallPie("wa-kpi-call-taker-load-factor", dataCaller, "Data Caller");
+            createSmallPie("wa-kpi-supervisor-load-factor", dataSupervisor, "Supervisors");
+            createSmallPie("wa-kpi-liaison-officer-load-factor", dataLiaison, "Liaison Officers");
+            createSmallPie("wa-kpi-call-taker-load-factor", dataCaller, "Call Takers");
 
 
         }
