@@ -22,8 +22,10 @@ window.waEC3.config = {
 
     },
     layout: { //layout settings
+        fs:true,//is the browser fullscreen
         cellWidth: 620, // available screen width for dashboard cell (px)
         cellHeight: 268,// available screen height for dashboard cell(px)
+        cellHeightNotFs: 243,// available screen height for dashboard cell(px) with adress bar
         cellMargin: 10,// margin between kpi (px)
         hoverZoomFactor: 1.05,//kpi zoom emphasis on hover
     },

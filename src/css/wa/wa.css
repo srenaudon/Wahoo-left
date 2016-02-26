@@ -12,6 +12,12 @@ with on for the dashboard */
     height: 577px;
     overflow: hidden;
 }
+/* not full-screen (-50px)*/
+.wa-grid-not-fs {
+    width: 1920px;
+    height: 527px;
+    overflow: hidden;
+}
 .gridster .gs-w {
     background: #373737;
     cursor: pointer;
@@ -23,7 +29,7 @@ with on for the dashboard */
 
 
 .wa-grid-cell {
-   overflow: hidden;
+    overflow: hidden;
 }
 
 .gridster .gs-w:hover{
@@ -35,6 +41,12 @@ with on for the dashboard */
 .wa-kpi {
     width: 620px;
     height: 228px;
+    margin-left: auto;
+    margin-right:auto ;
+}
+.wa-kpi-not-fs {
+    width: 620px;
+    height: 203px;
     margin-left: auto;
     margin-right:auto ;
 }
@@ -59,6 +71,15 @@ with on for the dashboard */
     margin-left: auto;
 }
 
+.wa-kpi-operators-load-factor-not-fs {
+    display: block;
+    width: 200px;
+    height: 175px;
+    float:left;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* KPI bus occupancy */
 .wa-kpi-bus-occupancy{
     padding-top:50px;
@@ -68,10 +89,25 @@ with on for the dashboard */
     height:100px;
 }
 
+.wa-kpi-bus-occupancy-not-fs{
+    padding-top:25px;
+    padding-left:auto;
+    padding-right:auto;
+    width:600px;
+    height:100px;
+}
+
 /* KPI Backlog */
-#wa-kpi-alert-event-backlog{
+.wa-kpi-alert-event-backlog{
     width: 620px;
     height: 200px;
+    margin-left: auto;
+    margin-right:auto ;
+}
+
+.wa-kpi-alert-event-backlog-not-fs{
+    width: 620px;
+    height: 175px;
     margin-left: auto;
     margin-right:auto ;
 }

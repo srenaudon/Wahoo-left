@@ -9,10 +9,15 @@
  *=========================================================================*/
 (function () {
     $(function () {
-
+        var actuelHeight = 0;
+        if(waEC3.config.layout.fs){
+            actuelHeight =  waEC3.config.layout.cellHeight;
+        }else{
+            actuelHeight =  waEC3.config.layout.cellHeightNotFs;
+        }
         //layout init
-        var gridster = $(".wa-grid ul").gridster({
-            widget_base_dimensions: [waEC3.config.layout.cellWidth, waEC3.config.layout.cellHeight],
+        var gridster = $(".gridster ul").gridster({
+            widget_base_dimensions: [waEC3.config.layout.cellWidth, actuelHeight],
             widget_margins: [waEC3.config.layout.cellMargin, waEC3.config.layout.cellMargin],
             extra_rows: 0,
             extra_rows: 0,
@@ -23,12 +28,12 @@
 
         // resize widgets on hover
         gridster.$el
-         .on('mouseenter', '> li', function() {
-            kendo.fx($(this)).zoom('in').startValue(1).endValue(waEC3.config.layout.hoverZoomFactor).play();
-         })
-         .on('mouseleave', '> li', function() {
-             kendo.fx($(this)).zoom('out').endValue(1).startValue(waEC3.config.layout.hoverZoomFactor).play();
-         });
+            .on('mouseenter', '> li', function() {
+                kendo.fx($(this)).zoom('in').startValue(1).endValue(waEC3.config.layout.hoverZoomFactor).play();
+            })
+            .on('mouseleave', '> li', function() {
+                kendo.fx($(this)).zoom('out').endValue(1).startValue(waEC3.config.layout.hoverZoomFactor).play();
+            });
     });
 
 })();
