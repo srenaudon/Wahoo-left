@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iframe Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+		body {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.banner {
+		position: fixed;
+		width: 100%;
+		height: 46px;
+	}
+	
+	.content {
+		position: fixed;
+		top: 46px;
+		width: 100%;
+		height: 100%;
+	}
+	.wa {
+		position: relative;
+		width: 100%;
+		height: 50%;
+	}
+	.video {
+		position: relative;
+		width: 100%;
+		height: 50%;
+	}
+
+	.fits {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+		</style>
+    </head>
+    <body>
+	 <div class="banner">
+            <iframe src="./banner.html" class="fits"></iframe>
+       </div>
+	   
+	 <div class="content">
+		  <div  class="wa">
+				<iframe src="../dashboard.html" class="fits"></iframe>
+		  </div>
+		   <div  class="video">
+				<iframe src="./video.html" class="fits"></iframe>
+		  </div>
+	  
+     </div>  
+    </body>
+</html>
